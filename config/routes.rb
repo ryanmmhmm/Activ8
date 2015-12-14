@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :user_sessions, only: [:new, :create, :destroy]
   resources :users
+  resources :activities
 
   # Sorcery specific route aliases
   get 'login' => 'user_sessions#new', as: :login
