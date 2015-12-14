@@ -31,7 +31,7 @@ class ActivitiesController < ApplicationController
   def update
     @activity = Activity.find(params[:id])
 
-    if @activity.update_attributes(activities_params)
+    if @activity.update(activity_params)
       redirect_to @activity, notice: "#{@activity.title.capitalize} was updated."
     else
       render :edit
@@ -53,14 +53,14 @@ class ActivitiesController < ApplicationController
   end
 
   private
-  def activities_params
-    require(:activities).permit(
-    params[:id,
+  def activity_params
+    params.require(:activity).permit(
+      :id,
       :title,
       :description,
       :location,
       :end_time,
       :picture_url,
-      :owner_id])
+      :owner_id)
   end
 end
