@@ -1,17 +1,4 @@
-<%= form_for @activity do |activity| %>
-  <div class="activity">
 
-    <!-- <iframe src="" frameborder="0">Google Map Image?</iframe> -->
-
-    <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
-    <li><p class="activity-owner"><%= activity.owner.username %></p></li>
-
-    <li><img src="<%= activity.picture_url %>" alt="Activity Image"></li>
-
-    <li><%= activity.title %></li>
-    <li><%= activity.location %></li>
-    <li><%= activity.end_time.to_date %></li>
-    <li><p><%= activity.description %></p></li>
-
-  </div>
-<% end %>
+<ul id="activity-details">
+  <%= render @activity %>
+</ul>
