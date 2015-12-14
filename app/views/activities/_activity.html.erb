@@ -3,7 +3,7 @@
   <!-- <iframe src="" frameborder="0">Google Map Image?</iframe> -->
 
   <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
-  <li><p class="activity-owner"><%= activity.owner.username %></p></li>
+  <li><%= link_to "#{activity.owner.username}", user_url(activity.owner), class: 'activity-owner' %></li>
 
   <li><img src="<%= activity.picture_url %>" alt="Activity Image"></li>
 
