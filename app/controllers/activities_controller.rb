@@ -15,6 +15,7 @@ class ActivitiesController < ApplicationController
 
   def create
     @activity = Activity.new(activity_params)
+    @activity.owner = current_user
 
     if @activity.save
       redirect_to @activity, notice: "#{@activity.title.capitalize} has been Acitv8'd."
