@@ -12,4 +12,14 @@
   <li><%= activity.end_time.to_date %></li>
   <li><p><%= activity.description %></p></li>
 
+  <% if activity.owner == current_user %>
+    <hr>
+    <p>current_user: <%= current_user %></p>
+    <p>activity.owner: <%= activity.owner %></p>
+    <p>This will ownly show if you are the owner of the activity.</p>
+    <div class="activity-options">
+      <li class="btn btn-edit"><%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %></li>
+      <li class="btn btn-destroy"><%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %></li>
+    </div>
+  <% end %>
 </div>

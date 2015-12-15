@@ -42,8 +42,10 @@ class ActivitiesController < ApplicationController
   end
 
   def destroy
+    @activity = Activity.find(params[:id])
+
     if @activity.destroy
-      redicret_to :root, notice: 'Your account has be deActiv8\'d'
+      redirect_to :root, notice: 'Your Activity has be De-Activ8\'d'
     elsif @activity.errors.is_true?
       flash.now[:alert] = 'Sorry, you can\'t deActiv8 that.'
       redirect_back_or_to (:activities)
