@@ -49,7 +49,7 @@ class ActivitiesController < ApplicationController
       redirect_back_or_to (:activities)
     else
       logout(current_user)
-      redirect_to :root, notice: 'Get out, heathen!'
+      redirect_to :root, alert: 'Get out, heathen!'
     end
 
   end

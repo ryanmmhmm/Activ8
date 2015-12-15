@@ -7,7 +7,7 @@
 
   <li><img src="<%= activity.picture_url %>" alt="Activity Image"></li>
 
-  <li><%= activity.title %></li>
+  <li><%= link_to "#{activity.title}", activity_path(activity) %></li>
   <li><%= activity.location %></li>
   <li><%= activity.end_time.to_date %></li>
   <li><p><%= activity.description %></p></li>
