@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #signup-form {
-  @include span-columns(4 of 4);
+  // @include span-columns(4 of 4);
 
-  h1, p, hr, div, a {
-    position: relative;
-    width: 50%;
-  }
+  // h1, p, hr, div, a {
+  //   position: relative;
+  //   width: 50%;
+  // }
+
+  margin: auto;
 
 }

@@ -34,6 +34,8 @@ body {
 
 .container {
   @include span-columns(4);
+  position: relative;
+  width: 90%;
 
   @include media($tablet) {
     @include span-columns(2);
@@ -46,6 +48,7 @@ body {
 
 .btn {
   color: black;
+  font-weight: bold;
   width: 50%;
   @include background(center no-repeat orange scroll);
   border-radius: $border-radius;
