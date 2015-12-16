@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # User Sorcery for Authentication
 gem 'sorcery', '~> 0.9'
 
+gem 'bourbon'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
