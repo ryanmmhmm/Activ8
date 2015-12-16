@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "grid-settings";
 @import "neat";
+@import "fonts";
 @import "users";
 @import "activities";
 
@@ -24,8 +25,8 @@ $border-radius: 0.1rem;
 
 
 body {
-  @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
-  font-family: 'helvetica', 'open-sans-light';
+  // @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfont.ttf');
+  font-family: 'Open Sans', 'helvetica';
 }
 
 .parent-container {
@@ -34,8 +35,6 @@ body {
 
 .container {
   @include span-columns(4);
-  position: relative;
-  width: 90%;
 
   @include media($tablet) {
     @include span-columns(2);
@@ -47,11 +46,14 @@ body {
 }
 
 .btn {
+  display: block;
   color: black;
   font-weight: bold;
-  width: 50%;
+  width: 90%;
+  margin: 5% auto;
+  padding: 2.5% 0;
   @include background(center no-repeat orange scroll);
   border-radius: $border-radius;
   border: none;
-  }
+}
 

@@ -5,11 +5,22 @@
 #signup-form {
   // @include span-columns(4 of 4);
 
-  // h1, p, hr, div, a {
-  //   position: relative;
-  //   width: 50%;
-  // }
+  width: 85%;
+  margin: 0 auto;
+  display: block;
 
-  margin: auto;
+  .field {
+
+    label {
+
+      text-align: right;
+    }
+
+    input {
+      float: right;
+      right: 0%;
+      width: 40%;
+    }
+  }
 
 }
