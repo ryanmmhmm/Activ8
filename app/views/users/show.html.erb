@@ -1,6 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Profile Photo</strong>
+  <img src="<%= @user.picture_url %>" alt="User Profile Picture">
+</p>
+
+<p>
+  <strong>Username</strong>
+  <%= @user.username %>
+</p>
+
+<p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
