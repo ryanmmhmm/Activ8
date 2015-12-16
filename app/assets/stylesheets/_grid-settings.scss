@@ -3,8 +3,10 @@
 //Grid Settings
 $column: 180px;
 $gutter: 30px;
-$grid-columns: 10;
+$grid-columns: 6;
 $max-width: 1200px;
+
+$visual-grid: true;
 
 $tablet: new-breakpoint(max-width 768px 2);
 $mobile: new-breakpoint(max-width 480px 1);

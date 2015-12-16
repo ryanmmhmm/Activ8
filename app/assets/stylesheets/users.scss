@@ -4,4 +4,10 @@
 
 #signup-form {
   @include span-columns(4 of 4);
+
+  h1, p, hr, div, a {
+    position: relative;
+    width: 50%;
+  }
+
 }

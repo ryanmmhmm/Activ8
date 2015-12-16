@@ -19,6 +19,15 @@
  *= require_self
  */
 
+// Variables for application
+$border-radius: 0.1rem;
+
+
+body {
+  @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
+  font-family: 'helvetica', 'open-sans-light';
+}
+
 .parent-container {
   @include outer-container;
 }
@@ -34,3 +43,12 @@
     @include span-columns(1);
   }
 }
+
+.btn {
+  color: black;
+  width: 50%;
+  @include background(center no-repeat orange scroll);
+  border-radius: $border-radius;
+  border: none;
+  }
+
