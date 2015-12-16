@@ -1,6 +1,9 @@
 @import "bourbon";
+@import "grid-settings";
+@import "neat";
 @import "users";
-@import "activities"
+@import "activities";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -16,10 +19,18 @@
  *= require_self
  */
 
-.container {
-
+.parent-container {
+  @include outer-container;
 }
 
-.column {
+.container {
+  @include span-columns(4);
 
+  @include media($tablet) {
+    @include span-columns(2);
+  }
+
+  @include media($mobile) {
+    @include span-columns(1);
+  }
 }
