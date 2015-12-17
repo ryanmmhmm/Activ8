@@ -1,0 +1,13 @@
+
+<hr>
+<div class="comment">
+  <div class="comment-user">
+    <img src="<%= comment.user.picture_url%>" alt="">
+    <p><%= link_to comment.user.username %></p>
+  </div>
+
+  <div class="comment-content">
+    <p>Time: <%= comment.created_at %></p>
+    <p>Message: <%= comment.body %></p>
+  </div>
+</div>
