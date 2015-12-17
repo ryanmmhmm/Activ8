@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+
   root to: 'activities#index'
 
   resources :user_sessions, only: [:new, :create, :destroy]
-  resources :users
-  resources :activities
+
+  resources :users do
+    resouces :comments, only: [:index, :show, :destroy]
+  end
+
+  resources :activities do
+    resources :comments
+  end
 
   # Sorcery specific route aliases
   get 'login' => 'user_sessions#new', as: :login
