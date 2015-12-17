@@ -28,6 +28,10 @@ body {
   font-family: 'helvetica', 'open-sans-light';
 }
 
+h1 {
+  padding-top: 35px;
+}
+
 .parent-container {
   @include outer-container;
 }
@@ -42,7 +46,47 @@ body {
   @include media($mobile) {
     @include span-columns(1);
   }
+
+  width: 100%;
 }
+// Start Navbar Styling
+#nav {
+  margin-top: -10px;
+  position: fixed;
+  width: 100%;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: auto;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .active {
+    background-color:#4CAF50;
+    }
+}
+
+
+
 
 .btn {
   color: black;

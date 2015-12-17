@@ -5,23 +5,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="">
+
+
 </head>
 <body class="container">
   <header>
+  <!-- Start Navbar -->
     <div id="nav">
-      <%= link_to 'Activities', activities_url %> |
-      <% if current_user %>
-        <%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
+    <ul>
+      <li><%= link_to 'Activities', activities_url %>
+      <% if current_user %></li>
+      <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
         <%= link_to 'Logout', :logout, method: :post %>
-      <% else %>
-        <%= link_to 'Sign Up', new_user_path %> |
+          <% else %>
+        <%= link_to 'Sign Up', new_user_path %>
         <%= link_to 'Login', :login %>
       <% end %>
+    </ul>
     </div>
+<!-- End Navbar -->
   </header>
 
+
   <div class="alerts">
-    <p id="notice"><%= flash[:notice] %></p>
+    <p id="notice"><%= flash[:notice]%></p>
     <p id="alert"><%= flash[:alert]%></p>
   </div>
 
