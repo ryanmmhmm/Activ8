@@ -26,6 +26,7 @@ $border-radius: 0.1rem;
 body {
   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
   font-family: 'helvetica', 'open-sans-light';
+  margin: 0;
 }
 
 h1 {
@@ -62,10 +63,12 @@ h1 {
       overflow: hidden;
       background-color: #333;
       width: auto;
+
     }
 
     li {
-        float: left;
+        float: right;
+        padding-right: 20px;
     }
 
     li a {
