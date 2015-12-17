@@ -2,7 +2,11 @@ class ActivitiesController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
 
   def index
-    @activities = Activity.all
+    if params[:search]
+      @activities = Activity.near(params[:search])
+    else
+      @activities = Activity.all
+    end
   end
 
   def show
@@ -60,6 +64,7 @@ class ActivitiesController < ApplicationController
   private
   def activity_params
     params.require(:activity).permit(
+      :search,
       :id,
       :title,
       :description,
