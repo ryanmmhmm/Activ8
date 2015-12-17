@@ -3,4 +3,6 @@ class Activity < ActiveRecord::Base
 
   validates :title, presence: true
   validates :end_time, presence: true
+
+  geocoded_by :location
 end
