@@ -1,3 +1,7 @@
 <h1>Show Comment</h1>
 
 <%= render @comment %>
+
+<div class="actions">
+  <p><%= link_to 'Edit', edit_activity_comment_path(@activity, @comment) %> | <%= link_to 'Back to Activity', activity_path(@activity) %> </p>
+</div>
