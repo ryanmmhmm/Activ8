@@ -29,6 +29,7 @@ body {
   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
   font-family: 'helvetica', 'open-sans-light';
   margin: 0;
+
 }
 
 h1 {
@@ -50,7 +51,7 @@ h1 {
     @include span-columns(1);
   }
 
-  width: 100%;
+
 }
 // Start Navbar Styling
 #nav {
@@ -86,7 +87,7 @@ h1 {
     }
 
     .active {
-    background-color:#4CAF50;
+      background-color:#4CAF50;
     }
 }
 

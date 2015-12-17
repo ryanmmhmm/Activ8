@@ -26,8 +26,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # User Sorcery for Authentication
 gem 'sorcery', '~> 0.9'
 
+# Bourbon Sass extraa
 gem 'bourbon'
 gem 'neat'
+
+# Figaroooo
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
