@@ -5,5 +5,5 @@ class Activity < ActiveRecord::Base
   validates :end_time, presence: true
 
   geocoded_by :location
-  after_validation :geocode
+  after_validation :geocode, if: :address_changed?
 end

@@ -1,4 +1,5 @@
 <h1>Activ8tions</h1>
+<%= button_tag "Find Activities near me", id: "nearby-search" %>
 <%= form_tag activities_path, method: :get do %>
   <%= label_tag :search, "Find Activities" %>
   <%= text_field_tag :search, params[:search] %>
