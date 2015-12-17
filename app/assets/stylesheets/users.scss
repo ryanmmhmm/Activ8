@@ -1,3 +1,42 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// @mixin centerer {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+// #signup-form {
+//   position: relative;
+//   background: #f06d06;
+//   width: 100%;
+//   height: 200px;
+//   margin: 2rem auto;
+// }
+
+// @include linear-gradient(#1e5799, #2989d8);
+
+#signup-form {
+  // @include span-columns(4 of 4);
+
+  width: 85%;
+  margin: 0 auto;
+  display: block;
+
+  .field {
+
+    label {
+
+      text-align: right;
+    }
+
+    input {
+      float: right;
+      right: 0%;
+      width: 40%;
+    }
+  }
+}
+
