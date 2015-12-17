@@ -3,3 +3,14 @@
 <ul id="activity-details">
   <%= render @activity %>
 </ul>
+
+<h4>Nearby Activities</h4>
+<ol>
+<% @nearby_activities.each do |a| %>
+<li>
+  <%= a.title %>
+  <p><%= a.description %></p>
+  <p><%= a.location %></p>
+  <p><%= a.distance_to(@activity, :km) %> kms</p>
+</li>
+<% end %>

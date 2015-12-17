@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @owner = @activity.owner
-    @nearby_activitys = @activity.nearbys
+    @nearby_activities = @activity.nearbys
   end
 
   def new
