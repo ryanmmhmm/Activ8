@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page-container">
+<html>
 <head>
   <title>Activ8</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,7 +11,7 @@
 
 
 </head>
-<body class="container">
+<body class="parent-container">
   <header>
   <!-- Start Navbar -->
     <div id="nav">
@@ -35,7 +35,9 @@
     <p id="alert"><%= flash[:alert]%></p>
   </div>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
