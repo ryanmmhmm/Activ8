@@ -32,5 +32,5 @@
 <h1>User's Comments</h1>
 
 <div class="comments container">
-  <%= render partial: 'comments/comment', collection: @user.comments %>
+  <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>
 </div>

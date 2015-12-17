@@ -4,4 +4,15 @@
   <%= render @activity %>
 </ul>
 
-<%= render @comments %>
+<hr>
+<h1>Activity Comments</h1>
+
+<% if @comments.any? %>
+  <div class="comments container">
+    <%= render partial: 'comments/comment', locals: { from_activity: true }, collection: @comments %>
+  </div>
+<% else %>
+  <div class="no-comments">
+    <p><strong>There are no comments to display.</strong> </p>
+  </div>
+<% end %>
