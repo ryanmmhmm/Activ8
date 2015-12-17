@@ -35,11 +35,16 @@ class CommentsController < ApplicationController
     if (@comment.user == current_user) && (@comment.update(comment_params))
       redirect_to activity_path(@comment.activity)
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
+    if @comment.destroy
+      redirect_to activity_path(params[:activity_id])
+    else
+      render :show
+    end
   end
 
   private
