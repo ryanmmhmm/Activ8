@@ -1,4 +1,9 @@
 <h1>Activ8tions</h1>
+<%= form_tag activities_path method: :get do %>
+<%= label_tag :search, "Find Activities" %>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search" %>
+<% end %>
 
 <h2>List of Activities</h2>
 
