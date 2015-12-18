@@ -16,7 +16,7 @@ function success(position) {
     data: {'latitude': lat, 'longitude': lon},
     dataType: 'html',
     success: function(data) {
-      console.log('it worked!' + data);
+      $('.activities').html(data);
     }
   })
 }

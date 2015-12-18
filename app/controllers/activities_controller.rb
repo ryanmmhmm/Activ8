@@ -4,8 +4,15 @@ class ActivitiesController < ApplicationController
   def index
     if params[:search]
       @activities = Activity.near(params[:search])
+    elsif params[:latitude] && params[:longitude]
+      @activities = Activity.near([params[:latitude], params[:longitude]])
     else
       @activities = Activity.all
+    end
+    @latitude = params[:latitude]
+    @longitude = params[:longitude]
+    if request.xhr?
+      render partial: 'location', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]}
     end
   end
 
