@@ -2,12 +2,24 @@ class ActivitiesController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
 
   def index
-    @activities = Activity.all
+    if params[:search]
+      @activities = Activity.near(params[:search])
+    elsif params[:latitude] && params[:longitude]
+      @activities = Activity.near([params[:latitude], params[:longitude]])
+    else
+      @activities = Activity.all
+    end
+    @latitude = params[:latitude]
+    @longitude = params[:longitude]
+    if request.xhr?
+      render partial: 'location', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]}
+    end
   end
 
   def show
     @activity = Activity.find(params[:id])
     @owner = @activity.owner
+    @nearby_activities = @activity.nearbys(10, :units => :km)
   end
 
   def new
@@ -59,6 +71,7 @@ class ActivitiesController < ApplicationController
   private
   def activity_params
     params.require(:activity).permit(
+      :search,
       :id,
       :title,
       :description,

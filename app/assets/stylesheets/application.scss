@@ -22,3 +22,87 @@
  */
 
 
+// Variables for application
+$border-radius: 0.1rem;
+
+
+body {
+
+  @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
+  font-family: 'helvetica', 'open-sans-light';
+}
+
+h1 {
+  padding-top: 35px;
+}
+
+.parent-container {
+  @include outer-container;
+}
+
+.container {
+  @include span-columns(4);
+
+  @include media($tablet) {
+    @include span-columns(2);
+  }
+
+  @include media($mobile) {
+    @include span-columns(1);
+  }
+
+  width: 100%;
+}
+// Start Navbar Styling
+#nav {
+  margin-top: -10px;
+  position: fixed;
+  width: 100%;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      width: auto;
+
+    }
+
+    li {
+        float: right;
+        padding-right: 20px;
+    }
+
+    li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .active {
+    background-color:#4CAF50;
+    }
+}
+
+
+
+
+.btn {
+  display: block;
+  color: black;
+  font-weight: bold;
+  width: 90%;
+  margin: 5% auto;
+  padding: 2.5% 0;
+  @include background(center no-repeat orange scroll);
+  border-radius: $border-radius;
+  border: none;
+}
+

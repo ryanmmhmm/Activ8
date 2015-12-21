@@ -3,3 +3,11 @@
 <ul id="activity-details">
   <%= render @activity %>
 </ul>
+
+<h4>Nearby Activities</h4>
+<ol>
+<li>
+
+  <%= render partial: 'location', collection: @nearby_activities, locals: {latitude: @activity.latitude, longitude: @activity.longitude} %>
+</li>
+
