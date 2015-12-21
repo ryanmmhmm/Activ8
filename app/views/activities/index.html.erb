@@ -1,6 +1,16 @@
 <h1>Activ8tions</h1>
+<%= button_tag "Find Activities near me", id: "nearby-search" %>
+<%= form_tag activities_path, method: :get do %>
+  <%= label_tag :search, "Find Activities" %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<!-- Google Maps -->
+<div id="map"></div>
 
 <h2>List of Activities</h2>
+
 
 <div class="activities">
   <ul>

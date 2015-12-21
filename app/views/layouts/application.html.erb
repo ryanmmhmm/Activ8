@@ -3,6 +3,8 @@
 <head>
   <title>Activ8</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['google_maps_api_key']}" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
@@ -11,18 +13,18 @@
 
 
 </head>
-<body class="parent-container">
+<body>
   <header>
   <!-- Start Navbar -->
     <div id="nav">
     <ul>
-      <li><%= link_to 'Activities', activities_url %>
-      <% if current_user %></li>
-      <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %>
-        <%= link_to 'Logout', :logout, method: :post %>
-          <% else %>
-        <%= link_to 'Sign Up', new_user_path %>
-        <%= link_to 'Login', :login %>
+      <li><%= link_to 'Activities', activities_url %></li>
+      <% if current_user %>
+        <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
+        <li><%= link_to 'Logout', :logout, method: :post %></li>
+      <% else %>
+        <li><%= link_to 'Sign Up', new_user_path %></li>
+        <li><%= link_to 'Login', :login %></li>
       <% end %>
     </ul>
     </div>
@@ -35,7 +37,7 @@
     <p id="alert"><%= flash[:alert]%></p>
   </div>
 
-<div class="container">
+<div class="parent-container">
   <%= yield %>
 </div>
 
