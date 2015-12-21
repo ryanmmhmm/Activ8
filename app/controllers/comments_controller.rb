@@ -1,26 +1,25 @@
 class CommentsController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
+  before_action :load_activity, except: [:index]
 
   def index
-    @comments = Comment.all
+    @comments = Comment.all.order(created_at: :desc)
   end
 
   def show
     @comment = Comment.find(params[:id])
-    @activity = Activity.find(params[:activity_id])
   end
 
   def new
-    @comment = Comment.new
+    @comment = @activity.comments.new
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @comment = @activity.comments.new(comment_params)
     @comment.user = current_user
-    @comment.activity = comment_params[:activity_id]
 
     if @comment.save
-      redirect_to activity_path(@comment.activity)
+      redirect_to activity_path(@activity)
     else
       render :new
     end
@@ -34,7 +33,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(comment_params[:id])
 
     if (@comment.user == current_user) && (@comment.update(comment_params))
-      redirect_to activity_path(@comment.activity)
+      redirect_to activity_path(@activity)
     else
       render :edit
     end
@@ -42,7 +41,7 @@ class CommentsController < ApplicationController
 
   def destroy
     if @comment.destroy
-      redirect_to activity_path(params[:activity_id])
+      redirect_to activity_path(@activity)
     else
       render :show
     end
@@ -50,10 +49,10 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(
-      :id,
-      :user_id,
-      :activity_id,
-      :body)
+    params.require(:comment).permit(:id, :user_id, :activity_id, :body)
+  end
+
+  def load_activity
+    @activity = Activity.find(params[:activity_id])
   end
 end
