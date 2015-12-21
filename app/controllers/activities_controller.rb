@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    @comments = @activity.comments
+    @comments = @activity.comments.order(created_at: :desc)
   end
 
   def new
