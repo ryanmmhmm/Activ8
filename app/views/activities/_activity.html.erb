@@ -1,8 +1,5 @@
 <div class="activity">
 
-  <!-- <iframe src="" frameborder="0">Google Map Image?</iframe> -->
-
-
   <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
   <li><%= link_to "#{activity.owner.username}", user_url(activity.owner), class: 'activity-owner' %></li>
 
@@ -21,3 +18,5 @@
     </div>
   <% end %>
 </div>
+
+<hr>
