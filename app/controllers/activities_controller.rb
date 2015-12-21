@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
     else
       @activities = Activity.all
     end
+
     @latitude = params[:latitude]
     @longitude = params[:longitude]
     if request.xhr?
@@ -19,6 +20,7 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @owner = @activity.owner
+    @comments = @activity.comments.order(created_at: :desc)
     @nearby_activities = @activity.nearbys(10, :units => :km)
   end
 

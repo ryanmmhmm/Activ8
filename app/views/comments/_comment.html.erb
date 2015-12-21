@@ -1,0 +1,14 @@
+
+<hr>
+<div class="comment">
+  <div class="comment-user">
+    <img src="<%= comment.user.picture_url %>" alt="Users Profile Picture">
+    <p><%= link_to_if from_activity, comment.user.username, user_path(comment.user) %></p>
+    <p><%= link_to_if !from_activity, comment.activity.title, activity_path(comment.activity) %></p>
+  </div>
+
+  <div class="comment-content">
+    <p>Time: <%= comment.created_at %></p>
+    <p>Message: <%= comment.body %></p>
+  </div>
+</div>

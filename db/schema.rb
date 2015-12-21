@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20151217183718) do
     t.float    "longitude"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "activity_id"
+    t.string   "body"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
     t.string   "crypted_password"
