@@ -10,6 +10,10 @@ body {
 
 }
 
+ul {
+  padding-left: 0;
+}
+
 h1 {
   padding-top: 35px;
 }
@@ -33,7 +37,7 @@ h1 {
 }
 // Start Navbar Styling
 #nav {
-  margin-top: -20px;
+  margin-top: -21px;
   position: fixed;
   width: 100%;
 
@@ -44,7 +48,6 @@ h1 {
       overflow: hidden;
       background-color: #333;
       width: auto;
-
     }
 
     li {

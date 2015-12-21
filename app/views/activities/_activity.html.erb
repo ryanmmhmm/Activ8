@@ -1,8 +1,7 @@
 <div class="activity">
 
   <!-- <iframe src="" frameborder="0">Google Map Image?</iframe> -->
-  <!-- Google Maps Api -->
-  <div id="map"></div>
+
 
   <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
   <li><%= link_to "#{activity.owner.username}", user_url(activity.owner), class: 'activity-owner' %></li>
