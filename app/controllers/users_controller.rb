@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     @activity = @user.owned_activities
   end
 
