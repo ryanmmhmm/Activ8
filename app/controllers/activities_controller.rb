@@ -2,12 +2,18 @@ class ActivitiesController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
 
   def index
+
     if params[:search]
       @activities = Activity.near(params[:search])
     elsif params[:latitude] && params[:longitude]
       @activities = Activity.near([params[:latitude], params[:longitude]])
     else
       @activities = Activity.all
+      @hash = Gmaps4rails.build_markers(@activities) do |activity, marker|
+        marker.lat activity.latitude
+        marker.lng activity.longitude
+        marker.infowindow "#{activity.title}, #{activity.description}, #{activity.location}"
+      end
     end
 
     @latitude = params[:latitude]
