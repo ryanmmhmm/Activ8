@@ -57,9 +57,10 @@ h1 {
 }
 // Start Navbar Styling
 #nav {
-  margin-top: -10px;
+  margin-top: -22px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
     ul {
       list-style-type: none;
