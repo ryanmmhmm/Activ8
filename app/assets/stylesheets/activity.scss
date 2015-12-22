@@ -1,5 +1,5 @@
 
-$border: 1px black solid;
+$border: 0px black solid;
 
 #activities {
 
@@ -8,7 +8,7 @@ $border: 1px black solid;
 .activity {
   display: inline-block;
   border: $border;
-  box-styling: content-box;
+  box-sizing: content-box;
 
   * {
     line-height: 1rem;
