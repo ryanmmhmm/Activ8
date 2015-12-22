@@ -1,8 +1,5 @@
 <div class="activity">
 
-  <!-- <iframe src="" frameborder="0">Google Map Image?</iframe> -->
-
-
   <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
   <li><%= link_to "#{activity.owner.username}", user_url(activity.owner), class: 'activity-owner' %></li>
 
@@ -15,9 +12,9 @@
 
   <% if activity.owner == current_user %>
     <hr>
-    <div class="activity-options">
-      <li class="btn btn-edit"><%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %></li>
-      <li class="btn btn-destroy"><%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %></li>
-    </div>
+    <span class="activity-options">
+      <%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %>
+      <%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %>
+    </span>
   <% end %>
 </div>

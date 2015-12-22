@@ -2,6 +2,7 @@
 @import "grid-settings";
 @import "neat";
 @import "fonts";
+@import "navigation";
 @import "users";
 @import "main";
 @import "maps";
@@ -24,6 +25,8 @@
 
 // Variables for application
 $border-radius: 0.1rem;
+$primary-bg-colour: #4CAF50;
+$secondary-bg-colour: #111;
 
 
 body {
@@ -55,55 +58,13 @@ h1 {
 
   width: 100%;
 }
-// Start Navbar Styling
-#nav {
-  margin-top: -22px;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      width: auto;
-
-    }
-
-    li {
-        float: right;
-        padding-right: 20px;
-    }
-
-    li a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    a:hover:not(.active) {
-        background-color: #111;
-    }
-
-    .active {
-    background-color:#4CAF50;
-    }
-}
-
-
-
 
 .btn {
   display: block;
   color: black;
   font-weight: bold;
-  width: 90%;
   margin: 5% auto;
-  padding: 2.5% 0;
+  // padding: 2.5% 0;
   @include background(center no-repeat orange scroll);
   border-radius: $border-radius;
   border: none;

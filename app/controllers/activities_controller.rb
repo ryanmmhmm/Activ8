@@ -26,6 +26,7 @@ class ActivitiesController < ApplicationController
     @owner = @activity.owner
     @comments = @activity.comments.order(created_at: :desc)
     @nearby_activities = @activity.nearbys(10, :units => :km)
+    populate_map
   end
 
   def new
