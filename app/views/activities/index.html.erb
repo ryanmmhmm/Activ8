@@ -6,6 +6,7 @@
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search" %>
   <% end %>
+  <%= link_to 'New Activity', new_activity_path %>
 </div>
 
 <!-- Google Maps -->
@@ -13,14 +14,10 @@
   <div id="map"></div>
 </div>
 
-<hr>
-
 <h2>List of Activities</h2>
 
-<div class="activities">
-  <ul>
+<div id="activities" class="container">
     <%= render @activities %>
-  </ul>
 </div>
 
 <script>
@@ -44,5 +41,3 @@
   }
 );
 </script>
-
-<%= link_to 'New Activity', new_activity_path %>
