@@ -5,13 +5,13 @@ class ActivitiesController < ApplicationController
 
     if params[:search]
       @activities = Activity.near(params[:search])
-      populate_map
+      populate_map(@activities)
     elsif params[:latitude] && params[:longitude]
       @activities = Activity.near([params[:latitude], params[:longitude]])
-      populate_map
+      populate_map(@activities)
     else
       @activities = Activity.all
-      populate_map
+      populate_map(@activities)
     end
 
     @latitude = params[:latitude]
@@ -26,7 +26,9 @@ class ActivitiesController < ApplicationController
     @owner = @activity.owner
     @comments = @activity.comments.order(created_at: :desc)
     @nearby_activities = @activity.nearbys(10, :units => :km)
-    populate_map
+
+    populate_map(@activities)
+    populate_map(@nearby_activities)
   end
 
   def new
@@ -88,8 +90,8 @@ class ActivitiesController < ApplicationController
       :owner_id)
   end
 
-  def populate_map(&args)
-    @hash = Gmaps4rails.build_markers(@activities) do |activity, marker|
+  def populate_map(activities)
+    @hash = Gmaps4rails.build_markers(activities) do |activity, marker|
       marker.lat(activity.latitude)
       marker.lng(activity.longitude)
       marker.infowindow "#{activity.title}, #{activity.description}, #{activity.location}"

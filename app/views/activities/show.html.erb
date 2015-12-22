@@ -1,9 +1,15 @@
 <h1>Activity Details</h1>
 
+<!-- Google Maps -->
+<div class="container">
+  <div id="map"></div>
+</div>
+
 <ul id="activity-details">
   <%= render @activity %>
 </ul>
 
+<hr>
 <h4>Nearby Activities</h4>
 <ol>
   <li>
@@ -23,3 +29,11 @@
     <p><strong>There are no comments to display.</strong> </p>
   </div>
 <% end %>
+
+<script>
+  function draw_markers(handler) {
+    var markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
+</script>
