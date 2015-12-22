@@ -1,7 +1,7 @@
 $(document).on('ready page:load', function() {
   // if ($('#map') !== [] ) {
   //   var canvas = $('#map');
-    console.log(canvas);
+    // console.log(canvas);
 
   //   handler = Gmaps.build('Google');
   //   handler.buildMap({
