@@ -5,9 +5,9 @@
   </div>
   <div class="activity-info">
     <p><%= link_to "#{activity.title}", activity_path(activity) %></p>
-    <p>Address: <%= activity.location %></p>
-    <p>End Time: <%= activity.end_time.to_date %></p>
-    <p>Description: <%= activity.description %></p>
+    <p><b>Address:</b> <%= activity.location %></p>
+    <p><b>End Time:</b> <%= activity.end_time.to_date %></p>
+    <p><b>Description:</b> <%= activity.description %></p>
     <!-- <img src="<%# activity.picture_url %>" alt="Activity Image"> -->
   </div>
   <div class="activity-options">
