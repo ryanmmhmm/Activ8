@@ -1,6 +1,6 @@
 <h1>Show Comment</h1>
 
-<%= render @comment %>
+<%= render partial: 'comments/comment', locals: { comment: @comment, from_activity: true }%>
 
 <div class="actions">
   <p><%= link_to 'Edit', edit_activity_comment_path(@activity, @comment) %> | <%= link_to 'Back to Activity', activity_path(@activity) %> </p>

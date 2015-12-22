@@ -15,7 +15,7 @@
     <% if activity.owner == current_user %>
       <div class="actions">
         <%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %>
-        <%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %>
+        <%= button_to 'Delete', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %>
       </div>
   <% end %>
   </div>
