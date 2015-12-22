@@ -1,22 +1,22 @@
 <div class="activity">
-
-  <li><img class="activity-owner" src="<%= activity.owner.picture_url %>" alt="Activ8'r Image"></li>
-  <li><%= link_to "#{activity.owner.username}", user_url(activity.owner), class: 'activity-owner' %></li>
-
-  <li><img src="<%= activity.picture_url %>" alt="Activity Image"></li>
-
-  <li><%= link_to "#{activity.title}", activity_path(activity) %></li>
-  <li><%= activity.location %></li>
-  <li><%= activity.end_time.to_date %></li>
-  <li><p><%= activity.description %></p></li>
-
-  <% if activity.owner == current_user %>
-    <hr>
-    <div class="activity-options">
-      <li class="btn btn-edit"><%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %></li>
-      <li class="btn btn-destroy"><%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %></li>
-    </div>
-  <% end %>
+  <div class="activity-owner">
+    <img src="<%= activity.owner.picture_url %>" alt="Activ8'r Image">
+    <%= link_to "#{activity.owner.username}", user_url(activity.owner)%>
+  </div>
+  <div class="activity-info">
+    <p><%= link_to "#{activity.title}", activity_path(activity) %></p>
+    <p>Address: <%= activity.location %></p>
+    <p>End Time: <%= activity.end_time.to_date %></p>
+    <p>Description: <%= activity.description %></p>
+    <!-- <img src="<%# activity.picture_url %>" alt="Activity Image"> -->
+  </div>
 </div>
-
-<hr>
+<% if activity.owner == current_user %>
+<div class="activity-options">
+  <p>Owner Options</p>
+  <div class="actions">
+    <%= button_to 'Edit', { action: :edit, id: activity.id }, method: :get %>
+    <%= button_to 'De-Activ8', { action: :destroy, id: activity.id }, method: :delete, data: { confirm: "Are you sure you want to De-Activ8 your activity: #{activity.title}?" } %>
+  </div>
+</div>
+<% end %>

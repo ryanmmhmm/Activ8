@@ -28,9 +28,22 @@
 
 <p><%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %></p>
+
+<hr>
+<% if @activity.any? %>
+  <h1>User's Activities</h1>
+  <%= render partial: 'activities/activity', collection: @activity %>
+<% else %>
+  <h1>You have not created any activities</h1>
+  <%= link_to 'Create an Activity', new_activity_path %>
+<% end %>
+
 <hr>
 <h1>User's Comments</h1>
-
 <div class="comments container">
-  <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>
+  <% if @user.comments.any? %>
+    <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>
+  <% else %>
+    <p><b>You have not made any comments.</b></p>
+  <% end %>
 </div>

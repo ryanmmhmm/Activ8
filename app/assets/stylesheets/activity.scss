@@ -1,0 +1,68 @@
+
+$border: 1px black solid;
+
+#activities {
+
+}
+
+.activity {
+  display: inline-block;
+  border: $border;
+  box-styling: content-box;
+
+  * {
+    line-height: 1rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .activity-owner {
+    width: auto;
+    border: $border;
+    margin: auto 0;
+
+    a {
+      display: block;
+    }
+  }
+
+  .activity-info {
+    width: 80%;
+    border: $border;
+
+    p {
+      display: block;
+    }
+  }
+}
+
+.activity-options {
+  width: 100%;
+  border: $border;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+
+  p {
+    width: 20%;
+    height: auto;
+    border: $border;
+  }
+
+  .actions {
+    width: 75%;
+    height: auto;
+  }
+
+  form {
+    border: none;
+  }
+
+  form > input {
+    display: inline-block;
+    border: none;
+    width: 70%;
+    padding: 0;
+  }
+}

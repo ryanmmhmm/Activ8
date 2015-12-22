@@ -1,24 +1,23 @@
 
-<h1>Activ8tions</h1>
-<%= button_tag "Find Activities near me", id: "nearby-search" %>
-<%= form_tag activities_path, method: :get do %>
-  <%= label_tag :search, "Find Activities" %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search" %>
-<% end %>
+<div class="sub-menu container">
+  <%= button_tag "Find Activities near me", id: "nearby-search" %>
+  <%= form_tag activities_path, method: :get do %>
+    <%= label_tag :search, "Find Activities" %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+  <% end %>
+  <%= link_to 'New Activity', new_activity_path %>
+</div>
 
 <!-- Google Maps -->
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
+<div class="container">
+  <div id="map"></div>
 </div>
 
 <h2>List of Activities</h2>
 
-
-<div class="activities">
-  <ul>
+<div id="activities" class="container">
     <%= render @activities %>
-  </ul>
 </div>
 
 <script>
@@ -42,5 +41,3 @@
   }
 );
 </script>
-
-<%= link_to 'New Activity', new_activity_path %>

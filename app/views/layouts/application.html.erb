@@ -19,7 +19,7 @@
   <!-- Start Navbar -->
     <div id="nav">
     <ul>
-      <li><%= link_to 'Activities', activities_url %></li>
+      <li><%= link_to 'Activities', :root %></li>
       <% if current_user %>
         <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
         <li><%= link_to 'Logout', :logout, method: :post %></li>
