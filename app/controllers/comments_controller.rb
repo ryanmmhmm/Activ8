@@ -40,6 +40,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
     if @comment.destroy
       redirect_to activity_path(@activity)
     else

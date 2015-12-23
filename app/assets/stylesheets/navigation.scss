@@ -61,6 +61,14 @@ $sub-margin: 0.5rem;
     color: white;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-top: 0.75rem;
+  }
+
   form {
     float: left;
     margin: $sub-margin;
