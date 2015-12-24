@@ -1,7 +1,13 @@
+
+#map-container {
+  background-color: black;
+}
+
 #map {
-  width: 85%;
-  min-height: 250px;
+  width: 90%;
+  min-height: 350px;
   margin: 0 auto;
   border: 0.5rem black solid;
+  border-radius: 1rem;
   clear: both;
 }
