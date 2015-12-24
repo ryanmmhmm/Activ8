@@ -27,7 +27,7 @@ class ActivitiesController < ApplicationController
     @comments = @activity.comments.order(created_at: :desc)
     @nearby_activities = @activity.nearbys(10, :units => :km)
 
-    populate_map(@activities)
+    populate_map(@activity)
     populate_map(@nearby_activities)
   end
 
@@ -94,7 +94,7 @@ class ActivitiesController < ApplicationController
     @hash = Gmaps4rails.build_markers(activities) do |activity, marker|
       marker.lat(activity.latitude)
       marker.lng(activity.longitude)
-      marker.infowindow "#{activity.title}, #{activity.description}, #{activity.location}"
+      marker.infowindow "Title: #{activity.title} Descpription: #{activity.description}\n Address: #{activity.location}"
     end
   end
 
