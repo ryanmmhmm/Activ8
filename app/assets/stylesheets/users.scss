@@ -22,10 +22,12 @@
   // @include span-columns(4 of 4);
 
   width: 85%;
-  margin: 0 auto;
+  // margin: 0 auto;
   display: block;
 
   .field {
+    width: 50%;
+    margin: 0 auto;
 
     label {
 
