@@ -1,4 +1,13 @@
 
+<div class="container">
+  <h1>Activities List</h1>
+</div>
+
+<!-- Google Maps -->
+<div id="map-container" class="container">
+  <div id="map"></div>
+</div>
+
 <div class="sub-menu container">
   <%= button_tag "Find Activities near me", id: "nearby-search" %>
   <%= form_tag activities_path, method: :get do %>
@@ -7,11 +16,6 @@
     <%= submit_tag "Search" %>
   <% end %>
   <%= link_to 'New Activity', new_activity_path %>
-</div>
-
-<!-- Google Maps -->
-<div id="map-container" class="container">
-  <div id="map"></div>
 </div>
 
 <div id="activities" class="container">
