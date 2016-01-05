@@ -30,16 +30,18 @@
           <li><%= link_to 'Login', :login %></li>
         <% end %>
       </ul>
-      <div class="alerts">
-        <p id="notice"><%= flash[:notice]%></p>
-        <p id="alert"><%= flash[:alert]%></p>
-      </div>
     </div>
 <!-- End Navbar -->
   </header>
 
   <div class="parent-container">
+    <div class="alerts container">
+      <p id="notice"><%= flash[:notice]%></p>
+      <p id="alert"><%= flash[:alert]%></p>
+    </div>
+
     <%= yield %>
+
   </div>
 
 </body>
