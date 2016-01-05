@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
-  has_many :owned_activities, class_name: 'Activity', foreign_key: 'owner_id'
+  has_many :owned_activities, class_name: 'Activity', foreign_key: 'owner_id', dependent: :destroy
   has_many :comments, dependent: :destroy
 
   # Sorcery related
