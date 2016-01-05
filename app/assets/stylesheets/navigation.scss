@@ -37,7 +37,7 @@
       margin-left: auto;
       margin-right: auto;
       z-index: 1;
-      position: relative;
+      position: fixed;
       margin-left: 688px;
       padding-top: 7px;
     }
@@ -48,7 +48,7 @@
       margin-left: 30px;
       margin-right: auto;
       z-index: 1;
-      position: relative;
+      position: fixed;
       padding-top: 5px;
     }
 
@@ -70,3 +70,21 @@
     //   z-index: -1;
     //   position:relative;
     // }
+
+
+// Footer styling
+
+.socialicon {
+  float: left;
+    img {
+      width: 40%;
+
+    }
+}
+
+.footer-secondary-links {
+  ul {
+    background-color: black;
+  }
+}
+
