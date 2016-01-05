@@ -1,0 +1,14 @@
+
+@import 'variables';
+
+.alerts {
+  #notice {
+    background-color: lightblue;
+    color: white;
+  }
+
+  #alert {
+    background-color: red;
+    color: white;
+  }
+}
