@@ -7,7 +7,7 @@
   width: 100%;
   z-index: 1;
   background-color: $primary-bg-colour;
-    }
+
 
   // #nav > ul:nth-child(2) > li {
   //   float: left;
@@ -41,19 +41,14 @@
     }
 
     img {
-      max-width: 4%;
       max-height: 4%;
       color: white;
       margin: 0;
       float: left;
     }
 
-    #main-logo {
-      // float: left;
-    }
     .activatelogo {
       float: left;
-      width: 10%;
       z-index: 2;
       position: fixed;
       padding-top: 7px;
@@ -64,12 +59,11 @@
       width: 100%;
       text-align: center;
       position: relative;
-      right: 80px;
+      right: -80px;
     }
 
     .menuicon {
       float: left;
-      width: 2%;
       margin-left: 30px;
       margin-right: auto;
       z-index: 2;
@@ -86,6 +80,7 @@
     .active {
       background-color: $primary-bg-colour;
     }
+  }
 
 
 
@@ -145,6 +140,14 @@
 
 // Footer styling
 
+footer > div > ul {
+  height: 50px;
+  margin: 0;
+}
+
+body > footer > div > ul:nth-child(2) > li {
+  display: inline;
+}
 
 
 .socialicon {

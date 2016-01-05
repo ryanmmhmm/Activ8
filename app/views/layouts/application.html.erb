@@ -19,6 +19,14 @@
   <header>
   <!-- Start Navbar -->
     <div id="nav">
+      <a href="#">
+      <img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
+      </a>
+      <div id="logo">
+        <a href="#" target="">
+          <img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic">
+        </a>
+      </div>
     <ul>
       <li><%= link_to 'Activities', :root %></li>
       <% if current_user %>
@@ -30,12 +38,6 @@
         <li><%= link_to 'Login', :login %></li>
       <% end %>
     </ul>
-
-
-      <a href="#"><img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png"></img></a>
-      <div id="logo">
-      <a href="#" target=""><img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
-      </div>
   </div>
 
 
@@ -56,16 +58,15 @@
 
   </div>
 
-</body>
+
 
 <!--<div class="wrapper-for-content-outside-of-footer">
    Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
 </div>-->
 
 <footer class="footer-2" role="contentinfo">
-  <div class="footer-logo">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
-  </div>
+    <div class="footer-secondary-links">
+
       <ul class="footer-social">
         <li class="socialicon"><a href="javascript:void(0)">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
@@ -78,7 +79,6 @@
         </a></li>
       </ul>
 
-    <div class="footer-secondary-links">
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
         <li><a href="javascript:void(0)">Privacy Policy</a></li>
@@ -86,5 +86,5 @@
 
     </div>
 </footer>
-
+</body>
 </html>
