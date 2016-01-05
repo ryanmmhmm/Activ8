@@ -2,10 +2,11 @@
 @import 'variables';
 
 // Start Navbar Styling
-#nav {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+    #nav {
+      position: fixed;
+      width: 100%;
+      z-index: -2;
+    }
 
     ul {
       list-style-type: none;
@@ -22,6 +23,7 @@
         padding-right: 20px;
     }
 
+
     li a {
         display: inline-block;
         color: white;
@@ -30,11 +32,39 @@
         text-decoration: none;
     }
 
+    .activatelogo {
+      float: left;
+      width: 13%;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: -1;
+      position: relative;
+    }
+
+    .menuicon {
+      float: left;
+      width: 2.4%;
+      margin-left: 70px;
+      margin-right: auto;
+      z-index: -1;
+      position: relative;
+    }
+
     a:hover:not(.active) {
-        background-color: $secondary-bg-colour;
+      background-color: $secondary-bg-colour;
     }
 
     .active {
     background-color: $primary-bg-colour;
     }
-}
+
+
+
+    // .logo {
+    //   float: left;
+    //   background: url(http://i67.tinypic.com/2rwbak5.jpg) 50% 0 no-repeat;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   z-index: -1;
+    //   position:relative;
+    // }
