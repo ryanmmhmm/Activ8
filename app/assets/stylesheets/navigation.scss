@@ -1,12 +1,8 @@
-$primary-bg-colour: #333;
-$secondary-bg-colour: #111;
 
-$sub-margin: 0.5rem;
-
+@import 'variables';
 
 // Start Navbar Styling
 #nav {
-  margin-top: -22px;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -104,5 +100,4 @@ $sub-margin: 0.5rem;
       border-radius: 0.1rem;
     }
   }
-
 }

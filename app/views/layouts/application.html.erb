@@ -19,6 +19,7 @@
   <header>
   <!-- Start Navbar -->
     <div id="nav">
+
     <ul>
       <li><%= link_to 'Activities', :root %></li>
       <% if current_user %>
@@ -37,26 +38,32 @@
     <ul id="main-logo">
       <a href="#" target=""><img src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
     </ul>
-
-
-
-
-
-
-
   </div>
+
+      <ul>
+        <li><%= link_to 'Activities', :root %></li>
+        <% if current_user %>
+          <li><%= link_to 'View Profile', user_path(current_user) %></li>
+          <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+          <li><%= link_to 'Logout', :logout, method: :post %></li>
+        <% else %>
+          <li><%= link_to 'Sign Up', new_user_path %></li>
+          <li><%= link_to 'Login', :login %></li>
+        <% end %>
+      </ul>
+    </div>
 <!-- End Navbar -->
   </header>
 
+  <div class="parent-container">
+    <div class="alerts container">
+      <p id="notice"><%= flash[:notice]%></p>
+      <p id="alert"><%= flash[:alert]%></p>
+    </div>
 
-  <div class="alerts">
-    <p id="notice"><%= flash[:notice]%></p>
-    <p id="alert"><%= flash[:alert]%></p>
+    <%= yield %>
+
   </div>
-
-<div class="parent-container">
-  <%= yield %>
-</div>
 
 </body>
 </html>

@@ -2,10 +2,11 @@
 @import "grid-settings";
 @import "neat";
 @import "fonts";
+@import "main";
 @import "navigation";
+@import "system-notifications";
 @import "activity";
 @import "users";
-@import "main";
 @import "maps";
 
 /*
@@ -23,51 +24,39 @@
  *= require_self
  */
 
+ // SASS Variables for application
+// $border-radius: 0.1rem;
+// $primary-bg-colour: #4CAF50;
+// $secondary-bg-colour: #111;
 
-// Variables for application
-$border-radius: 0.1rem;
-$primary-bg-colour: #4CAF50;
-$secondary-bg-colour: #111;
+// body {
 
+//   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
+//   font-family: 'helvetica', 'open-sans-light';
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: content-box;
+// }
 
-body {
+// h1 {
+//   padding-top: 35px;
+// }
 
-  @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
-  font-family: 'helvetica', 'open-sans-light';
-  margin: 0;
-  padding: 0;
-  box-sizing: content-box;
-}
+// .parent-container {
+//   @include outer-container;
+// }
 
-h1 {
-  padding-top: 35px;
-}
+// .container {
+//   @include span-columns(4);
 
-.parent-container {
-  @include outer-container;
-}
+//   @include media($tablet) {
+//     @include span-columns(2);
+//   }
 
-.container {
-  @include span-columns(4);
+//   @include media($mobile) {
+//     @include span-columns(1);
+//   }
 
-  @include media($tablet) {
-    @include span-columns(2);
-  }
-
-  @include media($mobile) {
-    @include span-columns(1);
-  }
-
-  width: 100%;
-}
-
-.btn {
-  display: block;
-  color: black;
-  font-weight: bold;
-  margin: 5% auto;
-  @include background(center no-repeat orange scroll);
-  border-radius: $border-radius;
-  border: none;
-}
+//   width: 100%;
+// }
 

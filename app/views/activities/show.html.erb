@@ -1,24 +1,25 @@
-<h1>Activity Details</h1>
+
+<div class="container">
+  <h1>Activity Details</h1>
+</div>
 
 <!-- Google Maps -->
-<div class="container">
+<div id="map-container" class="container">
   <div id="map"></div>
 </div>
 
-<ul id="activity-details">
+<ul id="activity-details" class="container">
   <%= render @activity %>
 </ul>
-
-<!-- <hr>
-<h4>Nearby Activities</h4>
+<hr>
+<!-- <h4>Nearby Activities</h4>
 <ol>
   <%# render partial: 'location', collection: @nearby_activities, locals: {latitude: @activity.latitude, longitude: @activity.longitude} %>
 </ol>
  -->
-<hr>
-<h1>Activity Comments</h1>
 
 <% if @comments.any? %>
+  <h1>Activity Comments</h1>
   <div class="comments container">
     <%= render partial: 'comments/comment', locals: { from_activity: true }, collection: @comments %>
   </div>

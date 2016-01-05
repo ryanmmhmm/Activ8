@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>User Profile</h1>
 
 <div class="user container">
+  <h1>User Profile</h1>
+
   <img src="<%= @user.picture_url %>" alt="Profile Picture">
 
   <p>
@@ -22,12 +21,8 @@
 
   <p>
     <strong>Salt:</strong>
-    <%= @user.salt %>
-  </p>
+  <p><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure you want to delete your account?' } %> | <%= link_to 'Back', users_path %></p>
 </div>
-
-<p><%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %></p>
 
 <hr>
 <% if @activity.any? %>
