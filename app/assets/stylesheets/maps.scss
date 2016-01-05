@@ -13,3 +13,44 @@
   border-radius: 1rem;
   clear: both;
 }
+
+#map-menu {
+  background-color: $primary-bg-colour;
+  color: white;
+  min-height: 45px;
+
+  button {
+    float: left;
+    margin: $sub-margin;
+    background-color: $secondary-bg-colour;
+    border: none;
+    border-radius: 0.1rem;
+    height: 1.25rem;
+
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-top: 0.75rem;
+  }
+
+  form {
+    float: left;
+    margin: $sub-margin;
+
+    input {
+      background-color: $secondary-bg-colour;
+      color: white;
+      border: none;
+      height: auto;
+      font: helvetica;
+      height: 1.25rem;
+      border-radius: 0.1rem;
+    }
+  }
+
+}

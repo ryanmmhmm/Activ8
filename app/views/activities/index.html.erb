@@ -8,7 +8,7 @@
   <div id="map"></div>
 </div>
 
-<div class="sub-menu container">
+<div id="map-menu" class="container">
   <%= button_tag "Find Activities near me", id: "nearby-search" %>
   <%= form_tag activities_path, method: :get do %>
     <%= label_tag :search, "Find Activities" %>
