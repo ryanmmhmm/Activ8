@@ -5,12 +5,14 @@
 #nav {
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
   background-color: $primary-bg-colour;
+    }
 
   // #nav > ul:nth-child(2) > li {
   //   float: left;
   // }
+
 
     ul {
       list-style-type: none;
@@ -26,7 +28,9 @@
     li {
         float: right;
         padding-right: 20px;
+        z-index: 2;
     }
+
 
     li a {
         display: inline-block;
@@ -47,18 +51,42 @@
     #main-logo {
       // float: left;
     }
+    .activatelogo {
+      float: left;
+      width: 10%;
+      z-index: 2;
+      position: fixed;
+      padding-top: 7px;
+
+    }
+
+    #logo {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      right: 80px;
+    }
+
+    .menuicon {
+      float: left;
+      width: 2%;
+      margin-left: 30px;
+      margin-right: auto;
+      z-index: 2;
+      position: fixed;
+      padding-top: 5px;
+    }
 
 
     a:hover:not(.active) {
       background-color: $secondary-bg-colour;
-
 
     }
 
     .active {
       background-color: $primary-bg-colour;
     }
-}
+
 
 
 .sub-menu {
@@ -66,6 +94,7 @@
   margin-top: 25px;
   color: white;
   min-height: 45px;
+}
 
   button {
     float: left;
@@ -100,4 +129,35 @@
       border-radius: 0.1rem;
     }
   }
+
+
+
+
+    // .logo {
+    //   float: left;
+    //   background: url(http://i67.tinypic.com/2rwbak5.jpg) 50% 0 no-repeat;
+    //   margin-left: auto;
+    //   margin-right: auto;
+    //   z-index: -1;
+    //   position:relative;
+    // }
+
+
+// Footer styling
+
+
+
+.socialicon {
+  float: left;
+    img {
+      width: 40%;
+
+    }
 }
+
+.footer-secondary-links {
+  ul {
+    background-color: black;
+  }
+}
+

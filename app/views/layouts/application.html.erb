@@ -19,10 +19,10 @@
   <header>
   <!-- Start Navbar -->
     <div id="nav">
-
     <ul>
       <li><%= link_to 'Activities', :root %></li>
       <% if current_user %>
+        <li><%= link_to 'View Profile', user_path(current_user) %></li>
         <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
         <li><%= link_to 'Logout', :logout, method: :post %></li>
       <% else %>
@@ -31,27 +31,18 @@
       <% end %>
     </ul>
 
-    <ul>
-    <li><a href="#"><img src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png"></img></a></li>
-    </ul>
 
-    <ul id="main-logo">
-      <a href="#" target=""><img src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
-    </ul>
+      <a href="#"><img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png"></img></a>
+      <div id="logo">
+      <a href="#" target=""><img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
+      </div>
   </div>
 
-      <ul>
-        <li><%= link_to 'Activities', :root %></li>
-        <% if current_user %>
-          <li><%= link_to 'View Profile', user_path(current_user) %></li>
-          <li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
-          <li><%= link_to 'Logout', :logout, method: :post %></li>
-        <% else %>
-          <li><%= link_to 'Sign Up', new_user_path %></li>
-          <li><%= link_to 'Login', :login %></li>
-        <% end %>
-      </ul>
-    </div>
+
+
+
+
+
 <!-- End Navbar -->
   </header>
 
@@ -66,4 +57,34 @@
   </div>
 
 </body>
+
+<!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
+
+<footer class="footer-2" role="contentinfo">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+  </div>
+      <ul class="footer-social">
+        <li class="socialicon"><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+          </a></li>
+        <li class="socialicon"><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+        </a></li>
+        <li class="socialicon"><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+        </a></li>
+      </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+
+    </div>
+</footer>
+
 </html>
