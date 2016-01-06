@@ -1,16 +1,20 @@
 
 @import 'variables';
 
+
+
 // Start Navbar Styling
 #nav {
   position: fixed;
   width: 100%;
   z-index: 1;
   background-color: $primary-bg-colour;
+  border-bottom: 5px solid black;
 
 
   // #nav > ul:nth-child(2) > li {
   //   float: left;
+  //   text-align: center;
   // }
 
 
@@ -22,7 +26,6 @@
       background-color: $primary-bg-colour;
       width: auto;
       float: right;
-
     }
 
     li {
@@ -30,7 +33,6 @@
         padding-right: 20px;
         z-index: 2;
     }
-
 
     li a {
         display: inline-block;
@@ -47,19 +49,19 @@
       float: left;
     }
 
-    .activatelogo {
-      float: left;
-      z-index: 2;
-      position: fixed;
-      padding-top: 7px;
-
-    }
-
     #logo {
       width: 100%;
       text-align: center;
       position: relative;
       right: -80px;
+    }
+
+    .activatelogo {
+      float: left;
+      z-index: 2;
+      position: fixed;
+      padding-top: 9.2px;
+      text-align: center;
     }
 
     .menuicon {
@@ -68,13 +70,12 @@
       margin-right: auto;
       z-index: 2;
       position: fixed;
-      padding-top: 5px;
+      padding-top: 9px;
     }
 
 
     a:hover:not(.active) {
       background-color: $secondary-bg-colour;
-
     }
 
     .active {
@@ -107,7 +108,7 @@
     color: white;
     font-weight: bold;
     float: left;
-    margin-top: 0.75rem;
+    // margin-top: 0.75rem;
   }
 
   form {
@@ -150,17 +151,41 @@ body > footer > div > ul:nth-child(2) > li {
 }
 
 
-.socialicon {
-  float: left;
-    img {
-      width: 40%;
+// .socialicon {
+//   float: left;
+//     img {
+//       width: 40%;
 
-    }
+//     }
+// }
+.footer-2 {
+  background-color: $primary-bg-colour;
+}
+
+.footer-logo {
+  text-align: center;
+  width: 100%;
+  img {
+    width: 10%;
+  }
+  .activate-footer-logo img {
+    position: absolute;
+    top: -50%;
+  }
 }
 
 .footer-secondary-links {
   ul {
     background-color: black;
+    a {
+      margin: 0 auto;
+    }
+  }
+}
+
+.footer-social {
+  img {
+    width: 40%;
   }
 }
 

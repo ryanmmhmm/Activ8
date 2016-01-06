@@ -22,11 +22,15 @@
       <a href="#">
       <img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
       </a>
+
+      <!-- ACTIVATE LOGO fix center alignment *not working -->
       <div id="logo">
         <a href="#" target="">
           <img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic">
         </a>
       </div>
+      <!-- End Logo -->
+
     <ul>
       <li><%= link_to 'Activities', :root %></li>
       <% if current_user %>
@@ -65,26 +69,41 @@
 </div>-->
 
 <footer class="footer-2" role="contentinfo">
-    <div class="footer-secondary-links">
-
+  <div class="footer-logo">
+    <img class="activate-logo-footer" src="http://i67.tinypic.com/2rwbak5.jpg" alt="Logo image">
       <ul class="footer-social">
-        <li class="socialicon"><a href="javascript:void(0)">
+        <li><a href="javascript:void(0)">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
           </a></li>
-        <li class="socialicon"><a href="javascript:void(0)">
+        <li><a href="javascript:void(0)">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
         </a></li>
-        <li class="socialicon"><a href="javascript:void(0)">
+        <li><a href="javascript:void(0)">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
         </a></li>
       </ul>
+  </div>
 
+  <div class="footer-secondary-links">
+    <ul>
+      <a href="javascript:void(0)">Terms and Conditions</a>
+      <a href="javascript:void(0)">Privacy Policy</a>
+    </ul>
+  </div>
+    <!-- <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul> -->
+
+ <!--    <div class="footer-secondary-links">
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
         <li><a href="javascript:void(0)">Privacy Policy</a></li>
       </ul>
 
-    </div>
+    </div> -->
 </footer>
+
 </body>
 </html>
