@@ -5,7 +5,7 @@
 #nav {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   background-color: $primary-bg-colour;
 
 
@@ -28,7 +28,7 @@
     li {
         float: right;
         padding-right: 20px;
-        z-index: 2;
+        z-index: 20;
     }
 
 
@@ -40,37 +40,25 @@
         text-decoration: none;
     }
 
-    img {
-      max-height: 4%;
-      color: white;
-      margin: 0;
-      float: left;
-    }
-
-    .activatelogo {
-      float: left;
-      z-index: 2;
-      position: fixed;
-      padding-top: 7px;
-
-    }
-
     #logo {
-      width: 100%;
-      text-align: center;
-      position: relative;
-      right: -80px;
+      img {
+        position: relative;
+        height: 30px;
+        margin: 15px;
+        z-index: 20;
+      }
     }
 
-    .menuicon {
-      float: left;
-      margin-left: 30px;
-      margin-right: auto;
-      z-index: 2;
-      position: fixed;
-      padding-top: 5px;
+    #hamburger-button {
+      img {
+        position: relative;
+        margin: 15px;
+        height: 30px;
+        width: 30px;
+        float: left;
+        z-index: 10;
+      }
     }
-
 
     a:hover:not(.active) {
       background-color: $secondary-bg-colour;
@@ -106,7 +94,7 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    float: left;
+    // float: left;
     margin-top: 0.75rem;
   }
 
