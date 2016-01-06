@@ -22,31 +22,26 @@
       <a id="hamburger-button" href="#">
         <img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
       </a>
-    <ul>
-      <li><%= link_to 'Activities', :root %></li>
-      <% if current_user %>
-        <li><%= link_to 'View Profile', user_path(current_user) %></li>
-        <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
-        <li><%= link_to 'Logout', :logout, method: :post %></li>
-      <% else %>
-        <li><%= link_to 'Sign Up', new_user_path %></li>
-        <li><%= link_to 'Login', :login %></li>
-      <% end %>
-    </ul>
-    <a id="logo" href="#" target="">
+      <ul>
+        <li><%= link_to 'Activities', :root %></li>
+        <% if current_user %>
+          <li><%= link_to 'View Profile', user_path(current_user) %></li>
+          <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
+          <li><%= link_to 'Logout', :logout, method: :post %></li>
+        <% else %>
+          <li><%= link_to 'Sign Up', new_user_path %></li>
+          <li><%= link_to 'Login', :login %></li>
+        <% end %>
+      </ul>
+      <a id="logo" href="#" target="">
       <img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="Image and video hosting by TinyPic">
-    </a>
-  </div>
-
-
-
-
-
-
+      </a>
+    </div>
 <!-- End Navbar -->
   </header>
 
   <div class="parent-container">
+
     <div class="alerts container">
       <p id="notice"><%= flash[:notice]%></p>
       <p id="alert"><%= flash[:alert]%></p>
@@ -63,26 +58,43 @@
 </div>-->
 
 <footer class="footer-2" role="contentinfo">
-    <div class="footer-secondary-links">
+  <div class="footer-logo">
+    <img class="activate-logo-footer" src="http://i67.tinypic.com/2rwbak5.jpg" alt="Logo image">
+  </div>
 
-      <ul class="footer-social">
-        <li class="socialicon"><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
-          </a></li>
-        <li class="socialicon"><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
-        </a></li>
-        <li class="socialicon"><a href="javascript:void(0)">
-          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
-        </a></li>
-      </ul>
+  <ul class="footer-social">
+    <li><a href="javascript:void(0)">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+    </a></li>
+    <li><a href="javascript:void(0)">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+    </a></li>
+    <li><a href="javascript:void(0)">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+    </a></li>
+  </ul>
 
+
+  <div class="footer-secondary-links">
+    <ul>
+      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+  </div>
+    <!-- <ul>
+    </ul> -->
+
+ <!--    <div class="footer-secondary-links">
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
         <li><a href="javascript:void(0)">Privacy Policy</a></li>
       </ul>
 
-    </div>
+    </div> -->
 </footer>
+
 </body>
 </html>

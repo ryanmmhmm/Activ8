@@ -7,148 +7,112 @@
   width: 100%;
   z-index: 10;
   background-color: $primary-bg-colour;
+  border-bottom: 5px solid black;
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $primary-bg-colour;
+    width: auto;
+    float: right;
+  }
 
-  // #nav > ul:nth-child(2) > li {
-  //   float: left;
-  // }
-
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: $primary-bg-colour;
-      width: auto;
+  li {
       float: right;
+      padding-right: 20px;
+      z-index: 20;
+  }
 
-    }
+  li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
 
-    li {
-        float: right;
-        padding-right: 20px;
-        z-index: 20;
-    }
-
-
-    li a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    #logo {
-      img {
-        position: relative;
-        height: 30px;
-        margin: 15px;
-        z-index: 20;
-      }
-    }
-
-    #hamburger-button {
-      img {
-        position: relative;
-        margin: 15px;
-        height: 30px;
-        width: 30px;
-        float: left;
-        z-index: 10;
-      }
-    }
-
-    a:hover:not(.active) {
-      background-color: $secondary-bg-colour;
-
-    }
-
-    .active {
-      background-color: $primary-bg-colour;
+  #logo {
+    img {
+      position: relative;
+      height: 30px;
+      margin: 15px;
+      z-index: 20;
     }
   }
 
+  #hamburger-button {
+    img {
+      position: relative;
+      margin: 15px;
+      height: 30px;
+      width: 30px;
+      float: left;
+      z-index: 10;
+    }
+  }
 
+  a:hover:not(.active) {
+    background-color: $secondary-bg-colour;
+  }
 
-.sub-menu {
-  background-color: $primary-bg-colour;
-  margin-top: 25px;
-  color: white;
-  min-height: 45px;
+  .active {
+    background-color: $primary-bg-colour;
+  }
 }
 
-  button {
-    float: left;
-    margin: $sub-margin;
-    background-color: $secondary-bg-colour;
-    border: none;
-    border-radius: 0.1rem;
-    height: 1.25rem;
+.footer-2 {
+  background-color: $primary-bg-colour;
+}
 
-    color: white;
+.footer-logo {
+  text-align: center;
+  width: 100%;
+
+  img {
+    width: 10%;
+    // float: right;
+  }
+
+  .activate-footer-logo {
+    position: absolute;
+    top: -50%;
+  }
+}
+
+.footer-social {
+  li {
+    display: inline;
+    margin: 0 2.5%;
+  }
+
+  img {
+    width: 5%;
   }
 
   a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    // float: left;
-    margin-top: 0.75rem;
   }
-
-  form {
-    float: left;
-    margin: $sub-margin;
-
-    input {
-      background-color: $secondary-bg-colour;
-      color: white;
-      border: none;
-      height: auto;
-      font: helvetica;
-      height: 1.25rem;
-      border-radius: 0.1rem;
-    }
-  }
-
-
-
-
-    // .logo {
-    //   float: left;
-    //   background: url(http://i67.tinypic.com/2rwbak5.jpg) 50% 0 no-repeat;
-    //   margin-left: auto;
-    //   margin-right: auto;
-    //   z-index: -1;
-    //   position:relative;
-    // }
-
-
-// Footer styling
-
-footer > div > ul {
-  height: 50px;
-  margin: 0;
-}
-
-body > footer > div > ul:nth-child(2) > li {
-  display: inline;
-}
-
-
-.socialicon {
-  float: left;
-    img {
-      width: 40%;
-
-    }
 }
 
 .footer-secondary-links {
+  overflow: none;
   ul {
     background-color: black;
+    margin: 0;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      margin: 0 auto;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
   }
 }
+
 
