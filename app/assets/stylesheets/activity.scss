@@ -43,12 +43,31 @@
   }
 }
 
+  .activity-options:hover {
+    background: #2d3336;
+  text-decoration: none;
+}
 .activity-options {
-  width: 10%;
+  width: 4%;
   border: $border;
   display: inline-block;
   position: relative;
   margin: 0;
+  background: #5f6163;
+  background-image: -webkit-linear-gradient(top, #5f6163, #131414);
+  background-image: -moz-linear-gradient(top, #5f6163, #131414);
+  background-image: -ms-linear-gradient(top, #5f6163, #131414);
+  background-image: -o-linear-gradient(top, #5f6163, #131414);
+  background-image: linear-gradient(to bottom, #5f6163, #131414);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+
 
   a {
     font-size: 60%;
