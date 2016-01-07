@@ -64,6 +64,12 @@
 
 .footer-2 {
   background-color: $primary-bg-colour;
+
+  // This is for sticking the footer at the bottom of the screen.
+  // position: fixed;
+  // left: 0px;
+  // bottom: 0px;
+  // width: 100%;
 }
 
 .footer-logo {
