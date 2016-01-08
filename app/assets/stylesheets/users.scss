@@ -20,29 +20,32 @@
 
 #signup-form {
   // @include span-columns(4 of 4);
-
-  width: 85%;
+  input, label {
+    display: block;
+  }
+  // width: 85%;
   // margin: 0 auto;
   display: block;
+  input {
+    margin: auto;
+  }
 
   .field {
     width: 50%;
     margin: 0 auto;
-
-    label {
-
-      text-align: right;
-    }
-
-    input {
-      float: right;
-      right: 0%;
-      width: 40%;
-    }
+    text-align: center;
+    padding-bottom: 15px;
   }
 }
 
-.editprofileform {
+.signup_page {
+  text-align: center;
+  color: white;
+  padding-top: 3.5%;
+  margin-top:0;
+}
+
+.signupform {
   text-align: center;
   color: white;
   display: block;
