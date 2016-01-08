@@ -17,7 +17,7 @@ class ActivitiesController < ApplicationController
     @latitude = params[:latitude]
     @longitude = params[:longitude]
     if request.xhr?
-      render partial: 'location', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]}
+      render partial: 'activity', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]}
     end
   end
 
