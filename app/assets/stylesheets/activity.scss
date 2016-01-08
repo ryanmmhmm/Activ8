@@ -103,3 +103,38 @@
 
   }
 }
+
+.activityform {
+  text-align: center;
+  color: white;
+  display: block;
+  margin: 50px;
+  opacity: 0.9
+}
+
+#activity_description {
+  height: 60px;
+  width: 40%;
+}
+
+#activity_location {
+  width: 30%;
+}
+
+#activity_title {
+  width: 30%;
+}
+
+.activity_form_title {
+  text-align: center;
+  color: white;
+  padding-top: 7%;
+}
+
+hr {
+height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+
