@@ -33,13 +33,20 @@
       text-decoration: none;
   }
 
-  #logo {
-    img {
+  // #logo {
+  //   img {
+  //     position: relative;
+  //     height: 30px;
+  //     margin: 15px;
+  //     z-index: 20;
+  //   }
+  // }
+
+  .activatelogo {
       position: relative;
       height: 30px;
       margin: 15px;
       z-index: 20;
-    }
   }
 
   #hamburger-button {
@@ -54,7 +61,7 @@
   }
 
   a:hover:not(.active) {
-    background-color: $secondary-bg-colour;
+    background-color: #e04736;//$secondary-bg-colour;
   }
 
   .active {
@@ -63,7 +70,7 @@
 }
 
 .footer-2 {
-  background-color: $primary-bg-colour;
+  background-color: #e04736; //primary-bg-colour;
 
   // This is for sticking the footer at the bottom of the screen.
   // position: fixed;
