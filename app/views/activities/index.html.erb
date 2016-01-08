@@ -21,7 +21,7 @@
 
 <div id="activities" class="container">
 <h2>Activites In Your Area</h2>
-    <%= render @activities %>
+    <%= render partial: 'activity', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]} %>
 </div>
 
 <script>
