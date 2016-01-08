@@ -24,7 +24,6 @@
         <img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
       </a>
       <ul>
-        <li><%= link_to 'Activities', :root %></li>
         <% if current_user %>
           <li><%= link_to 'View Profile', user_path(current_user) %></li>
           <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
@@ -32,6 +31,7 @@
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>
           <li><%= link_to 'Login', :login %></li>
+        <li><%= link_to 'Home', :root %></li>
         <% end %>
       </ul>
       <a id="logo" href=<%=root_url%> target="">
