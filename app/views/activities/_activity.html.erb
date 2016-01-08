@@ -13,7 +13,7 @@
       <p><b>End Time:</b> <%= activity.end_time.to_date %></p>
       <p><b>Description:</b> <%= activity.description %></p>
       <% if latitude && longitude %>
-       <p><b>Distance to:</b> <%= activity.distance_to([latitude, longitude], :km) %> kms</p>
+       <p><b>Distance to:</b> <%= activity.distance_to([latitude, longitude], :km).round(3) %> kms</p>
       <% end %>
     </div>
 
