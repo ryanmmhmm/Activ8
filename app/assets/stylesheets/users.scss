@@ -24,8 +24,12 @@
   display: block;
   opacity: 0.9;
 
-  .field {
-  padding-bottom: 15px;
+   .field {
+    padding-bottom: 15px;
+  }
+
+  .actions > .btn {
+    margin-bottom: 15px;
   }
 }
 
