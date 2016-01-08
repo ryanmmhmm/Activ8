@@ -60,11 +60,14 @@
 }
 
 .loginform {
+  .field{
+      padding-bottom: 15px;
+  }
   text-align: center;
   color: white;
   display: block;
   margin: 50px;
-  opacity: 0.9
+  opacity: 0.9;
 }
 
 .logintitle {
