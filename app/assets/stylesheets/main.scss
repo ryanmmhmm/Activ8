@@ -15,12 +15,18 @@ body {
   min-height: 90%
 }
 
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
 ul {
   padding-left: 0;
 }
 
 .parent-container {
   @include outer-container;
+  padding-bottom: 145px;
 }
 
 .container {
