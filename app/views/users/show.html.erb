@@ -34,8 +34,8 @@
 <% end %>
 
 <hr>
-<h1>User's Comments</h1>
 <div class="comments container">
+  <h1>User's Comments</h1>
   <% if @user.comments.any? %>
     <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>
   <% else %>
