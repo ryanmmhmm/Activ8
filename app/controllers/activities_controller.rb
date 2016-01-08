@@ -40,7 +40,7 @@ class ActivitiesController < ApplicationController
     @activity.owner = current_user
 
     if @activity.save
-      redirect_to @activity, notice: "#{@activity.title.capitalize} has been Acitv8'd."
+      redirect_to @activity, notice: "#{@activity.title.capitalize} has been Activated."
     else
       render :new, alert: 'Making your activity has wuba-duba-dub-dubbed... Call Rick.'
     end
@@ -66,9 +66,9 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
 
     if @activity.destroy
-      redirect_to :root, notice: 'Your Activity has be De-Activ8\'d'
+      redirect_to :root, notice: 'Your Activity has be De-Activated'
     elsif @activity.errors.is_true?
-      flash.now[:alert] = 'Sorry, you can\'t deActiv8 that.'
+      flash.now[:alert] = 'Sorry, you can\'t deActivated that.'
       redirect_back_or_to (:activities)
     else
       logout(current_user)
