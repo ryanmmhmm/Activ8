@@ -16,6 +16,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to(:users, notice: 'Logged out.  Thanks for using Activ8!')
+    redirect_to(:users, notice: 'Logged out.  Thanks for using Activate!')
   end
 end
