@@ -5,14 +5,14 @@
 </div>
 
 <div id="map-menu" class="container">
-  <%= button_tag "Near Me", id: "nearby-search" %>
   <%= form_tag activities_path, method: :get do %>
     <%= label_tag :search, "Search a Location" %>
 
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search" %>
   <% end %>
-  <%= link_to 'New Activity', new_activity_path %>
+  <%= button_tag "Near Me", id: "nearby-search" %>
+  <%= link_to 'Create Activity', new_activity_path %>
 </div>
 
 <div id="activities" class="container">
