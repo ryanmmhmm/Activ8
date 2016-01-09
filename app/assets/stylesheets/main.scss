@@ -1,6 +1,11 @@
 
 @import 'variables';
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
 
   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
@@ -12,12 +17,13 @@ body {
   background-image: url("DarkDiagonalGrain.jpg");
   background-repeat: none;
   background-width: 100%;
-  min-height: 90%
 }
 
 #wrapper {
   min-height: 100%;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
