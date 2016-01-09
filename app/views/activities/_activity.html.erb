@@ -10,10 +10,10 @@
     </div>
     <div class="card-copy">
       <p><b>Address:</b> <%= activity.location %></p>
-      <p><b>End Time:</b> <%= activity.end_time.to_date %></p>
+      <p><b>End Time:</b> <%= activity.end_time %></p>
       <p><b>Description:</b> <%= activity.description %></p>
       <% if activity.latitude && activity.longitude %>
-       <p><b>Distance to:</b> <%= activity.distance_to([activity.latitude, activity.longitude], :km).round(3) %> kms</p>
+        <p><b>Distance to:</b> <%= activity.distance_to([@latitude, @longitude], :km).round(3) %> kms</p>
       <% end %>
     </div>
 
