@@ -20,30 +20,38 @@
   }
 
   li {
-      float: right;
-      padding-right: 20px;
-      z-index: 20;
-  }
+    list-style-type: none;
+    float: right;
+    padding-right: 20px;
+    z-index: 20;
 
-  li a {
+      a {
       display: inline-block;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
+    }
+  }
+
+  #nav-logo {
+    position: relative;
+    float: left;
+  }
+
+  .nav-logo {
+    padding: 7px 8px;
   }
 
   .activatelogo {
-      position: relative;
-      height: 30px;
-      margin: 15px;
-      z-index: 20;
+    height: 30px;
+    z-index: 20;
   }
 
   #hamburger-button {
     img {
       position: relative;
-      margin: 15px;
+      margin: 7px 15px;
       height: 30px;
       width: 30px;
       float: left;
