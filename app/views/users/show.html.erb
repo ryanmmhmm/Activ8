@@ -1,6 +1,6 @@
 <div class="user container">
   <div class="user-attributes">
-    <h1><%= @user.username %>'s Profile</h1>
+    <h1><%= @user.username.capitalize %>'s Profile</h1>
 
     <img src="<%= @user.picture_url %>" alt="Profile Picture">
 
@@ -19,20 +19,20 @@
 
   <hr>
   <% if @activity.any? %>
-    <h1><%= @user.username %>'s Activities</h1>
+    <h1><%= @user.username.capitalize %>'s Activities</h1>
     <%= render partial: 'activities/activity', collection: @activity %>
   <% else %>
-    <h1>You have not created any activities</h1>
+    <h1><%= @user.username.capitalize %> has not created any activities</h1>
     <%= link_to 'Create an Activity', new_activity_path %>
   <% end %>
 
   <hr>
   <div class="comments container">
-    <h1><%= @user.username %>'s Comments</h1>
+    <h1><%= @user.username.capitalize %>'s Comments</h1>
     <% if @user.comments.any? %>
       <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>
     <% else %>
-      <p><b>You have not made any comments.</b></p>
+      <p><b><%= @user.username.capitalize %> has not made any comments.</b></p>
     <% end %>
   </div>
 </div>
