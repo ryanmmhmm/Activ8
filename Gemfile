@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'geocoder'
 gem 'gmaps4rails'
+
+# ransack for search and advanced search
+gem 'ransack', '~> 1.7'
+
 # User Sorcery for Authentication
 gem 'sorcery', '~> 0.9'
 

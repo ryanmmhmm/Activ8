@@ -22,7 +22,6 @@
   li {
     list-style-type: none;
     float: right;
-    padding-right: 20px;
     z-index: 20;
 
       a {
@@ -60,7 +59,7 @@
   }
 
   a:hover:not(.active) {
-    background-color: #e04736;//$secondary-bg-colour;
+    background-color: $footer-bg-color;
   }
 
   .active {

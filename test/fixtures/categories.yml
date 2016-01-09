@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity_id: 
+  user_id: 
+  athletic: false
+  sporting_event: false
+  night_life: false
+  general: false
+  other: false
+  random: false
+  food: false
+  drink: false
+  music: false
+  game: false
+  information: false
+  art: false
+  technology: false
+  deal: false
+
+two:
+  activity_id: 
+  user_id: 
+  athletic: false
+  sporting_event: false
+  night_life: false
+  general: false
+  other: false
+  random: false
+  food: false
+  drink: false
+  music: false
+  game: false
+  information: false
+  art: false
+  technology: false
+  deal: false

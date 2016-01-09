@@ -1,6 +1,7 @@
 class Activity < ActiveRecord::Base
   belongs_to :owner, class_name: User
   has_many :comments, dependent: :destroy
+  has_one :category, dependent: :destroy
 
   validates :owner_id, presence: true
   validates :title, presence: true

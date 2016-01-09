@@ -5,13 +5,20 @@
   margin-top: $menu-height;
   height: auto;
 
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   #notice {
-    background-color: lightblue;
+    background-color: $notice-color;
     color: white;
+    text-align: center;
   }
 
   #alert {
-    background-color: red;
+    background-color: $alert-color;
     color: white;
+    text-align: center;
   }
 }

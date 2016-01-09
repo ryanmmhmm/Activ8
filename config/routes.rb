@@ -6,10 +6,12 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :comments, only: [:index, :show, :destroy]
+    resources :categories, only: [:new, :create, :show, :edit, :update]
   end
 
   resources :activities do
     resources :comments
+    resources :categories, only: [:new, :create, :show, :edit, :update]
   end
 
   # Sorcery specific route aliases
