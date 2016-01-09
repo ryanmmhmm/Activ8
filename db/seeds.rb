@@ -13,6 +13,7 @@ User.create(email: "user2@app.com", password: "asdfg", password_confirmation: "a
 
 @activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: Date.today, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
 @activity.owner = User.first
+@activity.category = Category.new(technology:true, information:true, drink:true, food:true)
 @activity.save
 @comment = @activity.comments.create(body: "Andrew sucks at Chess.")
 @comment.user = User.last
