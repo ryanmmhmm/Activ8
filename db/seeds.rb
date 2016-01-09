@@ -7,14 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 ## Create Users
-User.create(email: "user1@app.com", password: "12345Test", password_confirmation: "12345Test", username: "Ryan", picture_url: "http://www.torontomike.com/images/blog/starwars.gif")
-User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirmation: 'Temp123!', username: 'Rob', picture_url: 'http://img2-ak.lst.fm/i/u/64s/2291dfce5f5c4a05adb2f59dc597d0f5.jpg')
-User.create(email: "user2@app.com", password: "asdfg", password_confirmation: "asdfg", username: "Scott", picture_url: "http://static.stereoboard.com/images/artistimages/50/50x50xtn_james-blake.jpg.pagespeed.ic.o2lHPXbI9M.jpg")
+User.create(email: "magowan.ryan@gmail.com", password: "12345Test", password_confirmation: "12345Test", username: "RyanMmHmm", picture_url: "https://pbs.twimg.com/profile_images/684964566820884480/LT4nau7g.png")
+User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirmation: 'Temp123!', username: 'Random', picture_url: 'http://img2-ak.lst.fm/i/u/64s/2291dfce5f5c4a05adb2f59dc597d0f5.jpg')
+User.create(email: "contact@robholody.io", password: "asdfg", password_confirmation: "asdfg", username: "Rob", picture_url: "http://robholody.io/img/rob-head.png")
 User.create(email: "scmwalsh@gmail.com", password: "larry", password_confirmation: "larry", username: "SCMWalsh", picture_url: "https://scontent-yyz1-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1978760_10153857569815008_1296979771_n.jpg?oh=83541e7d0a4bca3f4672ba08ec7f4b7a&oe=56FD106D")
 
 @activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
 @activity.owner = User.first
-@activity.category = Category.new(technology:true, information:true, drink:true, food:true)
 @activity.save
 @comment = @activity.comments.create(body: "These apps are amazing!")
 @comment.user = User.last
