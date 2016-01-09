@@ -5,6 +5,11 @@
   margin-top: $menu-height;
   height: auto;
 
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   #notice {
     background-color: $notice-color;
     color: white;
