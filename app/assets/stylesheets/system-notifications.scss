@@ -6,12 +6,14 @@
   height: auto;
 
   #notice {
-    background-color: lightblue;
+    background-color: $notice-color;
     color: white;
+    text-align: center;
   }
 
   #alert {
-    background-color: red;
+    background-color: $alert-color;
     color: white;
+    text-align: center;
   }
 }

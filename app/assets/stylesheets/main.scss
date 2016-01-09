@@ -1,17 +1,9 @@
 
 @import 'variables';
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-
   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
   font-family: 'helvetica', 'open-sans-light';
-  margin: 0;
-  padding: 0;
   box-sizing: content-box;
   // Change background image below **
   background-image: url("DarkDiagonalGrain.jpg");
@@ -20,10 +12,9 @@ body {
 }
 
 #wrapper {
-  position: relative;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 ul {
@@ -49,7 +40,7 @@ ul {
 }
 
 .footer-2 {
-  background-color: #e04736; //primary-bg-colour;
+  background-color: $footer-bg-color;
   position: relative;
   width: 100%;
   bottom: 0;
