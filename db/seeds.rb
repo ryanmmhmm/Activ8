@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 ## Create Users
-User.create(email: "magowan.ryan@gmail.com", password: "12345Test", password_confirmation: "12345Test", username: "RyanMmHmm", picture_url: "https://pbs.twimg.com/profile_images/684964566820884480/LT4nau7g.png")
+User.create(email: "magowan.ryan@gmail.com", password: "12345Test", password_confirmation: "12345Test", username: "RyanMmHmm", picture_url: "http://static1.squarespace.com/static/568ed94fa128e65d0d38c30e/t/568edd025a56685951bdbceb/1452303144979/rm-mono.png?format=500w")
 User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirmation: 'Temp123!', username: 'Random', picture_url: 'http://img2-ak.lst.fm/i/u/64s/2291dfce5f5c4a05adb2f59dc597d0f5.jpg')
 User.create(email: "contact@robholody.io", password: "asdfg", password_confirmation: "asdfg", username: "Rob", picture_url: "http://robholody.io/img/rob-head.png")
 User.create(email: "scmwalsh@gmail.com", password: "larry", password_confirmation: "larry", username: "SCMWalsh", picture_url: "https://scontent-yyz1-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1978760_10153857569815008_1296979771_n.jpg?oh=83541e7d0a4bca3f4672ba08ec7f4b7a&oe=56FD106D")
