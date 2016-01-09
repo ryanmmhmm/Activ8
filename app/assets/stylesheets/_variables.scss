@@ -1,7 +1,6 @@
 // SASS Variables for application
 
 // General App
-$border-radius: 0.1rem;
 $footer-bg-color: #e04736;
 $footer-height: 115px;
 
@@ -16,8 +15,13 @@ $notice-color: $footer-bg-color; //lightblue;
 $alert-color: $footer-bg-color; //fire;
 
 // Map
+$map-border-radius: 0.8em;
 
 // Activities
 $border: 0px black solid;
 $border-top: 1px black solid;
 
+// User Attributes
+$profile-picture-height: 100px;
+$profile-picture-width: 100px;
+$profile-picture-border-radius: 0.5rem;

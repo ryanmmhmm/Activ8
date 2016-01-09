@@ -10,4 +10,12 @@
   p {
     color: white;
   }
+
+  .comment-user {
+    img {
+      height: $profile-picture-height;
+      width: $profile-picture-width;
+      border-radius: $profile-picture-border-radius;
+    }
+  }
 }

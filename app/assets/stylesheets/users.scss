@@ -49,3 +49,22 @@
   padding-top: 3.5%;
 }
 
+.user {
+
+  p {
+    color: white;
+  }
+
+  a {
+    color: $footer-bg-color;
+  }
+
+  .user-attributes {
+    img {
+      height: $profile-picture-height;
+      width: $profile-picture-width;
+      border-radius: $profile-picture-border-radius;
+    }
+  }
+
+}
