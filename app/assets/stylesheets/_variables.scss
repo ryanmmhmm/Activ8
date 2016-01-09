@@ -12,8 +12,8 @@ $sub-margin: 0.5rem;
 $menu-height: 53px;
 
 // System Notifications
-$notice-color: lightblue;
-$alert-color: fire;
+$notice-color: $footer-bg-color; //lightblue;
+$alert-color: $footer-bg-color; //fire;
 
 // Map
 
