@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
 
   #Custom validations
   validates :email, uniqueness: true
+
+  after_create do
+    self.category = Category.new
+  end
 end
