@@ -6,7 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: $primary-bg-colour;
+  background-color: $primary-bg-color;
   border-bottom: 5px solid black;
 
   ul {
@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: $primary-bg-colour;
+    background-color: $primary-bg-color;
     width: auto;
     float: right;
   }
@@ -63,6 +63,6 @@
   }
 
   .active {
-    background-color: $primary-bg-colour;
+    background-color: $primary-bg-color;
   }
 }

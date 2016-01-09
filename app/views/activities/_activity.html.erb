@@ -3,9 +3,10 @@
   <div class="card">
     <div class="card-image">
       <img src="<%= activity.picture_url %>" alt="Activate'r Image">
-      <%= link_to "#{activity.owner.username}", user_url(activity.owner)%>
     </div>
     <div class="card-header">
+      <p><%= link_to "#{activity.owner.username}", user_url(activity.owner)%></p>
+      <hr class="style-seven">
       <p><%= link_to "#{activity.title}", activity_path(activity) %></p>
     </div>
     <div class="card-copy">

@@ -15,7 +15,7 @@
 }
 
 #map-menu {
-  background-color: $primary-bg-colour;
+  background-color: $primary-bg-color;
   color: white;
   border-top: 0.25rem black solid;
   min-height: 45px;
@@ -23,7 +23,7 @@
   button {
     float: left;
     margin: $sub-margin;
-    background-color: $secondary-bg-colour;
+    background-color: $secondary-bg-color;
     border: none;
     border-radius: 0.1rem;
     height: 1.25rem;
@@ -44,7 +44,7 @@
     margin: $sub-margin;
 
     input {
-      background-color: $secondary-bg-colour;
+      background-color: $secondary-bg-color;
       color: white;
       border: none;
       height: auto;
