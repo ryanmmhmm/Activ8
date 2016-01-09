@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109031548) do
+ActiveRecord::Schema.define(version: 20160109040701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,22 +32,22 @@ ActiveRecord::Schema.define(version: 20160109031548) do
   create_table "categories", force: :cascade do |t|
     t.integer  "activity_id"
     t.integer  "user_id"
-    t.boolean  "athletic"
-    t.boolean  "sporting_event"
-    t.boolean  "night_life"
-    t.boolean  "general"
-    t.boolean  "other"
-    t.boolean  "random"
-    t.boolean  "food"
-    t.boolean  "drink"
-    t.boolean  "music"
-    t.boolean  "game"
-    t.boolean  "information"
-    t.boolean  "art"
-    t.boolean  "technology"
-    t.boolean  "deal"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.boolean  "athletic",       default: false
+    t.boolean  "sporting_event", default: false
+    t.boolean  "night_life",     default: false
+    t.boolean  "general",        default: false
+    t.boolean  "other",          default: false
+    t.boolean  "random",         default: false
+    t.boolean  "food",           default: false
+    t.boolean  "drink",          default: false
+    t.boolean  "music",          default: false
+    t.boolean  "game",           default: false
+    t.boolean  "information",    default: false
+    t.boolean  "art",            default: false
+    t.boolean  "technology",     default: false
+    t.boolean  "deal",           default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "comments", force: :cascade do |t|
