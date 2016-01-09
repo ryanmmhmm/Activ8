@@ -2,14 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// @mixin centerer {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// @include linear-gradient(#1e5799, #2989d8);
+@import "variables";
 
 .signup_page {
   text-align: center;
@@ -23,6 +16,7 @@
   color: white;
   display: block;
   opacity: 0.9;
+  margin-top: $menu-height;
 
    .field {
     padding-bottom: 15px;
