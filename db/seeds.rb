@@ -13,14 +13,14 @@ User.create(email: "contact@robholody.io", password: "asdfg", password_confirmat
 User.create(email: "scmwalsh@gmail.com", password: "larry", password_confirmation: "larry", username: "SCMWalsh", picture_url: "https://scontent-yyz1-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1978760_10153857569815008_1296979771_n.jpg?oh=83541e7d0a4bca3f4672ba08ec7f4b7a&oe=56FD106D")
 
 @activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
-@activity.owner = User.first
+@activity.owner = User.find(3)
 @activity.save
 @comment = @activity.comments.create(body: "These apps are amazing!")
 @comment.user = User.last
 @comment.save
 
 @activity = Activity.create(title: "Star Wars Movie Premiere: Always Tomorrow", description: "Jar Jar Binks is a Sith Lord.", end_time: DateTime.tomorrow, location: "259 Richmond St W, Toronto, ON M5V 3M6", picture_url: "http://pixel.nymag.com/imgs/daily/vulture/2015/10/18/18-star-wars-poster.w529.h529.jpg")
-@activity.owner = User.last
+@activity.owner = User.first
 @activity.save
 @comment = @activity.comments.create(body: "I can't wait to see this movie.")
 @comment.user = User.first
