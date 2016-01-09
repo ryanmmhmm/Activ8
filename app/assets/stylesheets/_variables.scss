@@ -2,7 +2,9 @@
 
 // General App
 $footer-bg-color: #e04736;
-$footer-height: 115px;
+$footer-height: 84px;
+$footer-social-icon-width: 36px;
+$footer-social-margin: 0 0 10px 0;
 
 // Navigation
 $primary-bg-colour: #333;
@@ -15,7 +17,8 @@ $notice-color: $footer-bg-color; //lightblue;
 $alert-color: $footer-bg-color; //fire;
 
 // Map
-$map-border-radius: 0.8em;
+$map-border-radius: 0.25em;
+$map-bg-color: #e04736;
 
 // Activities
 $border: 0px black solid;

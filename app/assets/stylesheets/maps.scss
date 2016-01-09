@@ -2,21 +2,22 @@
 @import 'variables';
 
 #map-container {
-  background-color: black;
+  background-color: $map-bg-color;
 }
 
 #map {
   width: 90%;
   min-height: 350px;
-  margin: 0 auto;
-  border: 0.5rem black solid;
-  border-radius: 0.8rem;
+  margin: 15px auto;
+  border: 0.15rem black solid;
+  border-radius: $map-border-radius;
   clear: both;
 }
 
 #map-menu {
   background-color: $primary-bg-colour;
   color: white;
+  border-top: 0.25rem black solid;
   min-height: 45px;
 
   button {

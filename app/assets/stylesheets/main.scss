@@ -74,7 +74,7 @@ ul {
 }
 
 .footer-social {
-  margin: 0 0 15px 0;
+  margin: $footer-social-margin;
 
   li {
     display: inline;
@@ -82,7 +82,7 @@ ul {
   }
 
   img {
-    width: 44px;
+    width: $footer-social-icon-width;
   }
 
   a {
