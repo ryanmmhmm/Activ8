@@ -20,8 +20,8 @@ body {
 }
 
 #wrapper {
-  min-height: 100%;
   position: relative;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -32,7 +32,6 @@ ul {
 
 .parent-container {
   @include outer-container;
-  padding-bottom: 145px;
 }
 
 .container {
@@ -47,4 +46,61 @@ ul {
   }
 
   width: 100%;
+}
+
+.footer-2 {
+  background-color: #e04736; //primary-bg-colour;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-logo {
+  text-align: center;
+  width: 100%;
+
+  img {
+    width: 10%;
+    // float: right;
+  }
+
+  .activate-footer-logo {
+    position: absolute;
+    top: -50%;
+  }
+}
+
+.footer-social {
+  li {
+    display: inline;
+    margin: 0 2.5%;
+  }
+
+  img {
+    width: 5%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.footer-secondary-links {
+  overflow: none;
+  ul {
+    background-color: black;
+    margin: 0;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      margin: 0 auto;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+  }
 }
