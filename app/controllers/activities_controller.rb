@@ -27,8 +27,11 @@ class ActivitiesController < ApplicationController
     @comments = @activity.comments.order(created_at: :desc)
     @nearby_activities = @activity.nearbys(10, :units => :km)
 
+    @latitude = params[:latitude]
+    @longitude = params[:longitude]
+
     populate_map(@activity)
-    populate_map(@nearby_activities)
+    # populate_map(@nearby_activities)
   end
 
   def new

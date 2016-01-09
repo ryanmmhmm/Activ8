@@ -20,7 +20,7 @@
   <hr>
   <% if @activity.any? %>
     <h1><%= @user.username.capitalize %>'s Activities</h1>
-    <%= render partial: 'activities/activity', collection: @activity %>
+    <%= render partial: 'activities/activity', collection: @activity, locals: {latitude: params[:latitude], longitude: params[:longitude]} %>
   <% else %>
     <h1><%= @user.username.capitalize %> has not created any activities</h1>
     <%= link_to 'Create an Activity', new_activity_path %>
