@@ -3,7 +3,7 @@
 
 // Start Navbar Styling
 #nav {
-  // position: fixed;
+  position: fixed;
   width: 100%;
   z-index: 10;
   background-color: $primary-bg-colour;
@@ -72,7 +72,6 @@
 .footer-2 {
   background-color: #e04736; //primary-bg-colour;
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
 }
