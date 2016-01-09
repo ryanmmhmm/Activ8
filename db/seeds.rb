@@ -11,7 +11,7 @@ User.create(email: "user1@app.com", password: "12345Test", password_confirmation
 User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirmation: 'Temp123!', username: 'Rob', picture_url: 'http://img2-ak.lst.fm/i/u/64s/2291dfce5f5c4a05adb2f59dc597d0f5.jpg')
 User.create(email: "user2@app.com", password: "asdfg", password_confirmation: "asdfg", username: "Scott", picture_url: "http://static.stereoboard.com/images/artistimages/50/50x50xtn_james-blake.jpg.pagespeed.ic.o2lHPXbI9M.jpg")
 
-@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: Date.today, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
+@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
 @activity.owner = User.first
 @activity.category = Category.new(technology:true, information:true, drink:true, food:true)
 @activity.save
