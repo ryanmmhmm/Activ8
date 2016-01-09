@@ -15,7 +15,7 @@ User.create(email: "user2@app.com", password: "asdfg", password_confirmation: "a
 @activity.owner = User.first
 @activity.category = Category.new(technology:true, information:true, drink:true, food:true)
 @activity.save
-@comment = @activity.comments.create(body: "Andrew sucks at Chess.")
+@comment = @activity.comments.create(body: "These apps are amazing!")
 @comment.user = User.last
 @comment.save
 
