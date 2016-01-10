@@ -32,7 +32,11 @@
           <li><%= link_to 'Sign Up', new_user_path %></li>
           <li><%= link_to 'Login', :login %></li>
         <% end %>
+        <% if current_user %>
+          <li><%= link_to 'Home', activities_url %></li>
+        <% else %>
           <li><%= link_to 'Home', :root %></li>
+        <% end %>
       </ul>
       <li id="nav-logo"><a class="nav-logo" href=<%=root_url%> target="">
         <img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="">
@@ -58,7 +62,7 @@
 
   <footer class="footer-2" role="contentinfo">
     <div class="footer-logo">
-      <img class="activate-logo-footer" src="http://i67.tinypic.com/2rwbak5.jpg" alt="Logo image">
+      <%= link_to image_tag("http://i67.tinypic.com/2rwbak5.jpg", class: "activate-logo-footer", alt: "Activate Logo"),:root %>
     </div>
 
     <ul class="footer-social">
