@@ -21,6 +21,9 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def home
+  end
+
   def show
     @activity = Activity.find(params[:id])
     @owner = @activity.owner
