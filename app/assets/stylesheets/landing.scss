@@ -35,6 +35,7 @@
         color: $hero-color;
         font-size: 1.6em;
         margin-bottom: 0.5em;
+        background-color: rgba(0,0,0,0.5);
 
         @include media($large-screen) {
           font-size: 1.8em;
@@ -45,6 +46,8 @@
         color: $hero-color;
         line-height: 1.4em;
         margin: 0 auto 3em auto;
+        background-color: rgba(0,0,0,0.5);
+
 
         @include media($large-screen) {
           font-size: 1.1em;
