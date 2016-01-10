@@ -1,6 +1,4 @@
 .hero {
-  margin-right: -37.8px;
-  margin-left: -37.8px;
   margin-bottom: 2%;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
@@ -16,7 +14,7 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 3em;
+  // padding-bottom: 3em;
 
   .hero-logo img {
     height: 4em;
@@ -59,10 +57,12 @@
 
 
 
-.cards {
+.cards_home {
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-between);
+  float: left;
+  width: 33.3%;
 }
 
 .card {
