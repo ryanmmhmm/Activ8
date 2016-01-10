@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
-  skip_before_action :require_login, only: [:index, :show]
+  skip_before_action :require_login, only: [:index, :show, :landing]
 
-  def home
+  def landing
   end
 
   def index
