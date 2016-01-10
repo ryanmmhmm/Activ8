@@ -1,8 +1,10 @@
 class ActivitiesController < ApplicationController
   skip_before_action :require_login, only: [:index, :show]
 
-  def index
+  def home
+  end
 
+  def index
     if params[:search]
       @activities = Activity.near(params[:search])
       populate_map(@activities)
@@ -21,8 +23,6 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def home
-  end
 
   def show
     @activity = Activity.find(params[:id])
