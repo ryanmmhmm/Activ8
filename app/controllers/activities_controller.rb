@@ -1,8 +1,10 @@
 class ActivitiesController < ApplicationController
-  skip_before_action :require_login, only: [:index, :show]
+  skip_before_action :require_login, only: [:index, :show, :landing]
+
+  def landing
+  end
 
   def index
-
     if params[:search]
       @activities = Activity.near(params[:search])
       populate_map(@activities)
@@ -20,6 +22,7 @@ class ActivitiesController < ApplicationController
       render partial: 'activity', collection: @activities, locals: {latitude: params[:latitude], longitude: params[:longitude]}
     end
   end
+
 
   def show
     @activity = Activity.find(params[:id])
