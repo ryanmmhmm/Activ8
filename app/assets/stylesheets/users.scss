@@ -51,7 +51,14 @@
 
 .user {
 
+  h1 {
+    margin: $content-margin;
+  }
+
   .user-attributes {
+
+    margin: $content-margin;
+
     img {
       height: $profile-picture-height;
       width: $profile-picture-width;

@@ -14,8 +14,7 @@
 
   <div class="comment-options">
   <% if comment.user == current_user %>
-    <%= link_to 'Comment', activity_comment_path(comment.activity, comment.id) %>
-    <%= link_to 'Delete', activity_comment_path(comment.activity, comment), method: :delete %>
+    <p><%= link_to 'Comment', activity_comment_path(comment.activity, comment.id) %> | <%= link_to 'Delete', activity_comment_path(comment.activity, comment), method: :delete %></p>
   <% end %>
   </div>
 </div>

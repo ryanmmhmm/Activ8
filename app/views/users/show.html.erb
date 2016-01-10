@@ -1,6 +1,8 @@
 <div class="user container">
+  <hr>
+  <h1><%= @user.username.capitalize %>'s Profile</h1>
+  <hr>
   <div class="user-attributes">
-    <h1><%= @user.username.capitalize %>'s Profile</h1>
 
     <img src="<%= @user.picture_url %>" alt="Profile Picture">
 
@@ -20,14 +22,16 @@
   <hr>
   <% if @activity.any? %>
     <h1><%= @user.username.capitalize %>'s Activities</h1>
+    <hr>
     <%= render partial: 'activities/activity', collection: @activity, locals: {latitude: params[:latitude], longitude: params[:longitude]} %>
   <% else %>
     <h1><%= @user.username.capitalize %> has not created any activities</h1>
+    <hr>
     <%= link_to 'Create an Activity', new_activity_path %>
   <% end %>
 
-  <hr>
   <div class="comments container">
+    <hr>
     <h1><%= @user.username.capitalize %>'s Comments</h1>
     <% if @user.comments.any? %>
       <%= render partial: 'comments/comment', locals: { from_activity: false }, collection: @user.comments %>

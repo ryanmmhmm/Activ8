@@ -3,7 +3,11 @@
 @import 'activity-card';
 
 #activities {
-  // background-color: darkgrey;
+
+}
+
+.title {
+  margin: $content-margin;
 }
 
 .activity {

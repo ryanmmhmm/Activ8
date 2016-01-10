@@ -4,12 +4,18 @@
 
 .comments {
   margin: 15px 0;
+
+  h1 {
+    margin: $content-margin;
+  }
 }
 
 .comment {
   p {
     color: white;
   }
+
+  margin: $content-margin;
 
   .comment-user {
     img {
