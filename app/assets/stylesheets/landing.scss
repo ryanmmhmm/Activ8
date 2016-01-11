@@ -56,7 +56,7 @@
 
 
 
-.cards_home {
+.cards-home {
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-between);
