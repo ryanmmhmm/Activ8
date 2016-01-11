@@ -80,6 +80,11 @@ ul {
 
 .footer-social {
   margin: $footer-social-margin;
+  margin-top: 23px;
+
+  ul {
+  vertical-align: text-top;
+  }
 
   li {
     display: inline;

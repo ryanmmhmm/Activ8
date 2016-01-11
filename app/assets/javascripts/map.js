@@ -1,4 +1,10 @@
 $(document).on('ready page:load', function() {
+  // CUSTOM MARKER FIX
+  // var image = {
+  //       url: '/app/assets/images/activate-Alogo-marker.png',
+  //       scaledSize : new google.maps.Size(22, 32)
+  //   };
+
   var canvas = $('#map');
   console.log(canvas);
 
@@ -17,4 +23,6 @@ $(document).on('ready page:load', function() {
   function(){
     draw_markers(handler)
   });
+
+
 });
