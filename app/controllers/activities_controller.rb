@@ -100,7 +100,7 @@ class ActivitiesController < ApplicationController
     @hash = Gmaps4rails.build_markers(activities) do |activity, marker|
       marker.lat(activity.latitude)
       marker.lng(activity.longitude)
-      marker.infowindow "<b><a href='#{activity_path(activity)}'>#{activity.title}<a></b><br><u>Descpription:</u> #{activity.description}<br><u>Location title:</u> #{activity.location_title}<br><u>Address:</u> #{activity.location}<br/><a href=#{new_activity_comment_path(activity)}><b>Add Comment</b></a>"
+      marker.infowindow "<b><a href='#{activity_path(activity)}'>#{activity.title}<a></b><br><u>Descpription:</u> #{activity.description}<br><u>Location title:</u> #{activity.location_title}<br><u>Address:</u> #{activity.location}<br/><a href=#{new_activity_comment_path(activity)}><b>Add Comment</b> (#{activity.number_of_comments})</a>"
     end
   end
 
