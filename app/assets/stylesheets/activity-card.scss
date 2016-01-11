@@ -75,6 +75,10 @@
     p {
       margin: 0;
     }
+
+    p:first-child {
+      text-align: center;
+    }
   }
 
   .card-copy {
