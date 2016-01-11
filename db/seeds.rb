@@ -41,7 +41,7 @@ At the old ball game.")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "New Battletoads just released.", description: "Call: (416) 861-9521 to pre-order your copy.", end_time: DateTime.tomorrow, location_title: "Gamestop (EB Games)" location: "199 Bay St C-134, Toronto, ON M5L 1E7", picture_url: "https://upload.wikimedia.org/wikipedia/en/d/df/Battletoads_in_Battlemaniacs.png")
+@activity = Activity.create(title: "New Battletoads just released.", description: "Call: (416) 861-9521 to pre-order your copy.", end_time: DateTime.tomorrow, location_title: "Gamestop (EB Games)", location: "199 Bay St C-134, Toronto, ON M5L 1E7", picture_url: "https://upload.wikimedia.org/wikipedia/en/d/df/Battletoads_in_Battlemaniacs.png")
 @activity.owner = User.first
 @activity.save
 @acomment = @activity.comments.create(body: "Woah, I never thought this was going to be released!")
