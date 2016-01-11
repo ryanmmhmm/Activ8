@@ -3,25 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .comments {
-  margin: 15px 0;
+  display: table;
 
   h1 {
     margin: $content-margin;
   }
+
+  // section:nth-child(1) {
+  //   background-color: black;
+  // }
 }
 
 .comment {
+  display: table-row;
+  padding-bottom: 15px;
+
   p {
     color: white;
+    margin: 0;
+    line-height: 1.25em;
   }
-
-  margin: $content-margin;
 
   .comment-user {
+    display: table-cell;
+    width: 25%;
+    padding: $content-margin;
+
     img {
-      height: $profile-picture-height;
-      width: $profile-picture-width;
-      border-radius: $profile-picture-border-radius;
+      height: $comment-picture-height;
+      width: $comment-picture-width;
+      border-radius: $comment-picture-border-radius;
     }
   }
+
+  .comment-content {
+    display: table-cell;
+    margin: 0;
+  }
+
 }

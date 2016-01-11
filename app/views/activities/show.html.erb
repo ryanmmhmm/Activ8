@@ -1,19 +1,12 @@
-<div id="map-container" class="container">
-  <div id="map"></div>
-</div>
 
 <ul id="activity-details" class="container">
   <%= render partial: 'activity', locals: {activity: @activity, latitude: params[:latitude], longitude: params[:longitude]} %>
 </ul>
-<!-- <h4>Nearby Activities</h4>
-<ol>
-  <%# render partial: 'location', collection: @nearby_activities, locals: {latitude: @activity.latitude, longitude: @activity.longitude} %>
-</ol>
- -->
 
 <div class="comments container">
   <hr>
-  <h1>Activity Comments</h1>
+  <h1>Activity Comments: <%= @activity.number_of_comments %></h1>
+  <hr>
   <% if @comments.any? %>
       <%= render partial: 'comments/comment', locals: { from_activity: true }, collection: @comments %>
   <% else %>
@@ -22,6 +15,11 @@
     </div>
   <% end %>
 </div>
+
+<div id="map-container" class="container">
+  <div id="map"></div>
+</div>
+
 <script>
   function draw_markers(handler) {
     var markers = handler.addMarkers(<%=raw @hash.to_json %>);
