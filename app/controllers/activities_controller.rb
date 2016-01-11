@@ -72,9 +72,9 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
 
     if @activity.destroy
-      redirect_to :root, notice: 'Your Activity has be De-Activated'
+      redirect_to :index, notice: 'Your Activity has be De-Activated.'
     elsif @activity.errors.is_true?
-      flash.now[:alert] = 'Sorry, you can\'t deActivated that.'
+      flash.now[:alert] = 'Sorry, you can\'t deActivate that.'
       redirect_back_or_to (:activities)
     else
       logout(current_user)
