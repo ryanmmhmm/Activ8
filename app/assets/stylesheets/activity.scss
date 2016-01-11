@@ -7,7 +7,7 @@
 }
 
 .title {
-  margin: $content-margin;
+  text-align: center;
 }
 
 .activity {
@@ -97,7 +97,6 @@
 
   form {
     border: none;
-    width: 110%;
   }
 
   form > input {
