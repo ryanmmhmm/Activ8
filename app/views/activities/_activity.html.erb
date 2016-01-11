@@ -2,7 +2,7 @@
 <div class="cards">
   <div class="card">
     <div class="card-image">
-      <img src="<%= activity.picture_url %>" alt="Activate'r Image">
+      <%= link_to image_tag(activity.picture_url, alt: "Activity Image"), activity_path(activity) %>
     </div>
     <div class="card-header">
       <p><%= link_to "#{activity.owner.username}", user_url(activity.owner)%></p>
@@ -10,6 +10,7 @@
       <p><%= link_to "#{activity.title}", activity_path(activity) %></p>
     </div>
     <div class="card-copy">
+      <p><b>Location Name: </b><%= activity.location_title %></p>
       <p><b>Address:</b> <%= activity.location %></p>
       <p><b>End Time:</b> <%= activity.end_time %></p>
       <p><b>Description:</b> <%= activity.description %></p>
