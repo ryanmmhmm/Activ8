@@ -108,24 +108,41 @@
 }
 
 .activityform {
+  .submit{
+    padding-top: 2%;
+  }
+  .field {
+    padding-bottom: 1%
+  }
   text-align: center;
-  color: white;
+  color: #333;
   display: block;
   margin: 50px;
-  opacity: 0.9
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
 }
 
 #activity_description {
   height: 60px;
-  width: 40%;
+  width: 65%;
+}
+
+#activity_location_title {
+  width: 65%
 }
 
 #activity_location {
-  width: 30%;
+  width: 65%;
 }
 
 #activity_title {
-  width: 30%;
+  width: 65%;
 }
 
 .activity_form_title {
