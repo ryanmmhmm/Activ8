@@ -25,8 +25,8 @@
       </a>
       <ul>
         <% if current_user %>
+          <li><%= link_to image_tag(current_user.picture_url, alt: 'View Profile'), user_path(current_user), class: 'nav-profile-picture' %></li>
           <li><%= link_to 'Logout', :logout, method: :post %></li>
-          <li><%= link_to 'View Profile', user_path(current_user) %></li>
           <li><%= link_to 'Create Activity', new_activity_url %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>
@@ -55,10 +55,6 @@
     <%= yield %>
 
   </div>
-
-<!--<div class="wrapper-for-content-outside-of-footer">
-   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
-</div>-->
 
   <footer class="footer-2" role="contentinfo">
     <div class="footer-logo">

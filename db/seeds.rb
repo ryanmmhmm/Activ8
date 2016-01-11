@@ -12,21 +12,21 @@ User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirm
 User.create(email: "contact@robholody.io", password: "asdfg", password_confirmation: "asdfg", username: "Rob", picture_url: "http://robholody.io/img/rob-head.png")
 User.create(email: "scmwalsh@gmail.com", password: "larry", password_confirmation: "larry", username: "SCMWalsh", picture_url: "https://scontent-yyz1-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1978760_10153857569815008_1296979771_n.jpg?oh=83541e7d0a4bca3f4672ba08ec7f4b7a&oe=56FD106D")
 
-@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
+@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location_title: "Bitmaker Labs" , location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
 @activity.owner = User.find(3)
 @activity.save
 @comment = @activity.comments.create(body: "These apps are amazing!")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "Star Wars Movie Premiere: Always Tomorrow", description: "Jar Jar Binks is a Sith Lord.", end_time: DateTime.tomorrow, location: "259 Richmond St W, Toronto, ON M5V 3M6", picture_url: "http://pixel.nymag.com/imgs/daily/vulture/2015/10/18/18-star-wars-poster.w529.h529.jpg")
+@activity = Activity.create(title: "Star Wars Movie Premiere: Always Tomorrow", description: "Jar Jar Binks is a Sith Lord.", end_time: DateTime.tomorrow, location_title: "Scotiabank Theatre", location: "259 Richmond St W, Toronto, ON M5V 3M6", picture_url: "http://pixel.nymag.com/imgs/daily/vulture/2015/10/18/18-star-wars-poster.w529.h529.jpg")
 @activity.owner = User.first
 @activity.save
 @comment = @activity.comments.create(body: "I can't wait to see this movie.")
 @comment.user = User.first
 @comment.save
 
-@activity = Activity.create(title: "Watch the Jays lose in the playoffs :(", description: "Joey Bat Flip.", end_time: DateTime.tomorrow, location: "1 Blue Jays Way, Toronto, ON M5V 1J1", picture_url: "http://www.blogto.com/upload/2011/11/20111119-blue-jays-better.jpg")
+@activity = Activity.create(title: "Watch the Jays lose in the playoffs :(", description: "Joey Bat Flip.", end_time: DateTime.tomorrow, location_title:"SkyDome", location: "1 Blue Jays Way, Toronto, ON M5V 1J1", picture_url: "http://www.blogto.com/upload/2011/11/20111119-blue-jays-better.jpg")
 @activity.owner = User.last
 @activity.save
 
@@ -41,7 +41,7 @@ At the old ball game.")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "New Battletoads just released.", description: "Call: (416) 861-9521 to pre-order your copy.", end_time: DateTime.tomorrow, location: "199 Bay St C-134, Toronto, ON M5L 1E7", picture_url: "https://upload.wikimedia.org/wikipedia/en/d/df/Battletoads_in_Battlemaniacs.png")
+@activity = Activity.create(title: "New Battletoads just released.", description: "Call: (416) 861-9521 to pre-order your copy.", end_time: DateTime.tomorrow, location_title: "Gamestop (EB Games)", location: "199 Bay St C-134, Toronto, ON M5L 1E7", picture_url: "https://upload.wikimedia.org/wikipedia/en/d/df/Battletoads_in_Battlemaniacs.png")
 @activity.owner = User.first
 @activity.save
 @acomment = @activity.comments.create(body: "Woah, I never thought this was going to be released!")

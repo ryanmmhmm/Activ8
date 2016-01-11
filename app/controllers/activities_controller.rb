@@ -72,9 +72,9 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
 
     if @activity.destroy
-      redirect_to :root, notice: 'Your Activity has be De-Activated'
+      redirect_to :activities, notice: 'Your Activity has be De-Activated.'
     elsif @activity.errors.is_true?
-      flash.now[:alert] = 'Sorry, you can\'t deActivated that.'
+      flash.now[:alert] = 'Sorry, you can\'t deActivate that.'
       redirect_back_or_to (:activities)
     else
       logout(current_user)
@@ -100,7 +100,7 @@ class ActivitiesController < ApplicationController
     @hash = Gmaps4rails.build_markers(activities) do |activity, marker|
       marker.lat(activity.latitude)
       marker.lng(activity.longitude)
-      marker.infowindow "<b><a href='#{activity_path(activity)}'>#{activity.title}<a></b><br> Descpription: #{activity.description}<br> Address: #{activity.location}"
+      marker.infowindow "<b><a href='#{activity_path(activity)}'>#{activity.title}<a></b><br><u>Descpription:</u> #{activity.description}<br><u>Location title:</u> #{activity.location_title}<br><u>Address:</u> #{activity.location}<br/><a href=#{new_activity_comment_path(activity)}><b>Add Comment</b> (#{activity.number_of_comments})</a>"
     end
   end
 

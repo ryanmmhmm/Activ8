@@ -58,6 +58,16 @@
     }
   }
 
+  .nav-profile-picture {
+    padding: 6px 16px;
+
+    img {
+      height: 30px;
+      width: 30px;
+      border-radius: $profile-picture-border-radius;
+    }
+  }
+
   a:hover:not(.active) {
     background-color: $footer-bg-color;
   }

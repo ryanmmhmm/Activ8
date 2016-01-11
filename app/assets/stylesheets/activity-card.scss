@@ -69,17 +69,27 @@
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
-    line-height: 1.5em;
+    line-height: 1.0em;
     padding: ($base-spacing / 3) ($base-spacing / 2);
+
+    p {
+      margin: 0;
+    }
+
+    p:first-child {
+      text-align: center;
+    }
   }
 
   .card-copy {
     font-size: 0.9em;
-    line-height: 1.5em;
+    line-height: 1.0em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
+    padding-bottom: 0;
 
     p {
-      margin: 0 0 ($base-spacing / 2);
+      // margin: 0 0 ($base-spacing / 2);
+      margin: 0.25rem 0;
     }
   }
 
@@ -99,4 +109,10 @@
       background-color: $card-background;
     }
   }
+
+  .add-comment {
+    padding-top: 0;
+    text-align: center;
+  }
+
 }
