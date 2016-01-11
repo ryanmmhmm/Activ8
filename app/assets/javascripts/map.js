@@ -8,6 +8,7 @@ $(document).on('ready page:load', function() {
   var canvas = $('#map');
   console.log(canvas);
 
+
   handler = Gmaps.build('Google');
   handler.buildMap({
     provider: {
@@ -18,6 +19,7 @@ $(document).on('ready page:load', function() {
 
       // pass in other Google Maps API options here
     },
+
     internal: {
       id: 'map'
     }
@@ -26,5 +28,8 @@ $(document).on('ready page:load', function() {
     draw_markers(handler)
   });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> map-marker
 });
