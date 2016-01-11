@@ -143,3 +143,12 @@
     }
   }
 }
+
+.team-member-attributes {
+  display: inline-block;
+
+  li {
+    list-style-type: none;
+    text-align: center;
+  }
+}
