@@ -43,7 +43,7 @@
 }
 
 .loginform {
-  .field{
+  .field {
       padding-bottom: 15px;
   }
   text-align: center;
@@ -64,6 +64,34 @@
   text-align: center;
   color: white;
   padding-top: 3.5%;
+}
+
+.commentheader {
+   color: black;
+}
+
+.commentform {
+  margin-top: 50px;
+  .field {
+    padding-bottom: 15px;
+  }
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+
+#comment_body {
+    height: 60px;
+    width: 65%;
 }
 
 .user {

@@ -10,14 +10,19 @@
       </ul>
     </div>
   <% end %>
-
+<div class="commentform">
+  <h1 class="commentheader">Add a new comment</h1>
+  <hr>
   <div class="field">
-    <%= f.label :body %>
-    <%= f.text_field :body %>
+    <%= f.label :body %><br/>
+    <%= f.text_area :body %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn" %>
   </div>
+ </div
 
 <% end %>
+
+
