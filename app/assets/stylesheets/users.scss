@@ -41,12 +41,19 @@
   display: block;
   margin: 50px;
   opacity: 0.9;
+  background: #333;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
 }
 
 .logintitle {
   text-align: center;
   color: white;
-  padding-top: 3.5%;
+  // padding-top: 3.5%;
 }
 
 .user {
