@@ -12,20 +12,30 @@
 }
 
 .signup-form {
-  text-align: center;
-  color: white;
-  display: block;
-  opacity: 0.9;
-  margin-top: $menu-height;
-
-   .field {
+      h2 {
+        color: black;
+      }
+     .field {
     padding-bottom: 15px;
+  }
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
   }
 
   .actions > .btn {
     margin-bottom: 15px;
   }
-}
+
 
 .edit_user_title {
   text-align: center;
@@ -37,10 +47,17 @@
       padding-bottom: 15px;
   }
   text-align: center;
-  color: white;
+  color: #333;
   display: block;
   margin: 50px;
   opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
 }
 
 .logintitle {

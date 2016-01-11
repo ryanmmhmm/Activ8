@@ -1,13 +1,13 @@
 <section class="comment container">
   <div class="comment-user">
     <img src="<%= comment.user.picture_url %>" alt="Users Profile Picture">
-    <p><%= link_to_if from_activity, comment.user.username, user_path(comment.user) %></p>
+    <p><b><%= link_to_if from_activity, comment.user.username, user_path(comment.user) %></b></p>
     <p><%= link_to_if !from_activity, comment.activity.title, activity_path(comment.activity) %></p>
   </div>
 
   <div class="comment-content">
-    <p>Message: <%= comment.body %></p>
-    <p>Time: <%= comment.created_at %></p>
+    <p><%= comment.body %></p>
+    <p>Posted at: <%= comment.created_at %></p>
     <% if comment.user == current_user %>
       <p><%= link_to 'Delete', activity_comment_path(comment.activity, comment), method: :delete %></p>
     <% end %>

@@ -10,7 +10,7 @@
   <% if @comments.any? %>
       <%= render partial: 'comments/comment', locals: { from_activity: true }, collection: @comments %>
   <% else %>
-    <div class="comment">
+    <div class="comment container">
       <p><strong>There are no comments to display.</strong> </p>
     </div>
   <% end %>
@@ -25,5 +25,6 @@
     var markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
+    handler.getMap().setZoom(16);
   }
 </script>
