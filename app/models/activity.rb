@@ -13,4 +13,8 @@ class Activity < ActiveRecord::Base
   after_create do
     self.category = Category.new
   end
+
+  def number_of_comments
+    self.comments.length
+  end
 end
