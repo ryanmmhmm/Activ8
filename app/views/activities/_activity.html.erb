@@ -4,11 +4,13 @@
     <div class="card-image">
       <%= link_to image_tag(activity.picture_url, alt: "Activity Image"), activity_path(activity) %>
     </div>
+
     <div class="card-header">
       <p><%= link_to "#{activity.owner.username}", user_url(activity.owner)%></p>
       <hr class="style-seven">
       <p><%= link_to "#{activity.title}", activity_path(activity) %></p>
     </div>
+
     <div class="card-copy">
       <p><b>Location Name: </b><%= activity.location_title %></p>
       <p><b>Address:</b> <%= activity.location %></p>
@@ -19,9 +21,8 @@
       <% end %>
     </div>
 
-
-    <!-- <img src="<%# activity.picture_url %>" alt="Activity Image"> -->
     <div class="card-header add-comment">
+      <hr class="style-seven">
       <%= link_to 'Add Comment', new_activity_comment_path(activity) %>
       </div>
   </div>
