@@ -145,3 +145,25 @@
     }
   }
 }
+
+.team {
+  h1 {
+    margin-left: 15px;
+  }
+
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+
+    .team-member-attributes {
+      display: inline-block;
+      text-align: center;
+
+
+      li {
+        list-style-type: none;
+      }
+
+    }
+  }
+}
