@@ -14,6 +14,23 @@ p {
   color: white;
 }
 
+.pop-out{
+  height: 450px;
+  width:200px;
+  background-color: red;
+  position: fixed;
+  top: 50px;
+  left: -200px;
+  transition: all .5s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.show {
+  left: 0px;
+  opacity: 1;
+}
+
 body {
   @include font-face('open-sans-light', '/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf');
   font-family: 'helvetica', 'open-sans-light';

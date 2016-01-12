@@ -21,7 +21,7 @@
   <!-- Start Navbar -->
     <div id="nav" class="container">
       <a id="hamburger-button" href="#">
-        <img class="menuicon" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
+        <img class="menuicon" id="hamburger-button" src="http://allfootballclub.com/wp-content/themes/nuovo/images/mobile-nav-icon.png">
       </a>
       <ul>
         <% if current_user %>
@@ -38,8 +38,22 @@
         <img class="activatelogo" src="http://i67.tinypic.com/2rwbak5.jpg" border="0" alt="">
       </a></li>
     </div>
+    <div class="pop-out">
+      <ul>
+        <% if current_user %>
+          <li><%= link_to 'Logout', :logout, method: :post %></li>
+          <li><%= link_to 'Create Activity', new_activity_url %></li>
+        <% else %>
+          <li><%= link_to 'Sign Up', new_user_path %></li>
+          <li><%= link_to 'Login', :login %></li>
+        <% end %>
+        <li><%= link_to 'Home', activities_url %></li>
+      </ul>
+      </ul>
+    </div>
 <!-- End Navbar -->
   </header>
+
 
   <div class="parent-container">
 
