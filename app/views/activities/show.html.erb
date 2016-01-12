@@ -5,7 +5,7 @@
 
 <div class="comments container">
   <hr>
-  <h1>Activity Comments: <%= @activity.number_of_comments %></h1>
+  <h1 class="activity_comments_header">Activity Comments: <%= @activity.number_of_comments %></h1>
   <hr>
   <% if @comments.any? %>
       <%= render partial: 'comments/comment', locals: { from_activity: true }, collection: @comments %>

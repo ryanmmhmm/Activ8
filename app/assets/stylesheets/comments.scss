@@ -1,9 +1,24 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.activity_comments_header {
+  color: #333;
+}
 .comments {
   display: table;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 100%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+
+
 
   h1 {
     margin: $content-margin;
@@ -15,7 +30,7 @@
   padding-bottom: 15px;
 
   p {
-    color: white;
+    color: black;
     margin: 0;
     line-height: 1.25em;
     padding-left: 15px;
