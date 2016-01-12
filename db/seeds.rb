@@ -12,36 +12,28 @@ User.create(email: 'no_activity@app.com', password: 'Temp123!', password_confirm
 User.create(email: "contact@robholody.io", password: "asdfg", password_confirmation: "asdfg", username: "Rob", picture_url: "http://robholody.io/img/rob-head.png")
 User.create(email: "scmwalsh@gmail.com", password: "larry", password_confirmation: "larry", username: "SCMWalsh", picture_url: "https://scontent-yyz1-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/1978760_10153857569815008_1296979771_n.jpg?oh=83541e7d0a4bca3f4672ba08ec7f4b7a&oe=56FD106D")
 
-@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location_title: "Bitmaker Labs" , location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
+@activity = Activity.create(title: "Meet Your Makers: Web & iOS Demos", description: "Looking for web or iOS development talent? Here's your chance to find it.", end_time: DateTime.now, location_title: "Bitmaker Labs" , location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://i64.tinypic.com/f0ysgp.jpg")
 @activity.owner = User.find(3)
 @activity.save
 @comment = @activity.comments.create(body: "These apps are amazing!")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "Star Wars Movie Premiere: Always Tomorrow", description: "Jar Jar Binks is a Sith Lord.", end_time: DateTime.tomorrow, location_title: "Scotiabank Theatre", location: "259 Richmond St W, Toronto, ON M5V 3M6", picture_url: "http://pixel.nymag.com/imgs/daily/vulture/2015/10/18/18-star-wars-poster.w529.h529.jpg")
+@activity = Activity.create(title: "ZUMBA!", description: "Tired of the treadmill? Want to try something different? Looking to make new friends? Come join the Zumba party and dance the night away!", end_time: DateTime.tomorrow, location_title: "Fountain Blu", location: "200 Princes' Blvd, Toronto, ON M6K 3C3, Toronto, ON", picture_url: "http://i64.tinypic.com/2ljt8qe.jpg")
 @activity.owner = User.first
 @activity.save
-@comment = @activity.comments.create(body: "I can't wait to see this movie.")
+@comment = @activity.comments.create(body: "This extremely fun dance based workout improves your cardiovascular system while toning your entire body.")
 @comment.user = User.first
 @comment.save
 
-@activity = Activity.create(title: "Watch the Jays lose in the playoffs :(", description: "Joey Bat Flip.", end_time: DateTime.tomorrow, location_title:"SkyDome", location: "1 Blue Jays Way, Toronto, ON M5V 1J1", picture_url: "http://www.blogto.com/upload/2011/11/20111119-blue-jays-better.jpg")
+@activity = Activity.create(title: "Tuesday Turn-Up", description: "You've worked hard all day. Come relax and enjoy our amazing cocktails", end_time: DateTime.tomorrow, location_title:"Early Mercy", location: "540 King St W, Toronto, ON M5V 1M3", picture_url: "http://i66.tinypic.com/mb7n2o.jpg")
 @activity.owner = User.last
 @activity.save
-
-@comment = @activity.comments.create(body: "Take me out to the ball game,
-Take me out with the crowd;
-Just buy me some peanuts and Cracker Jack,
-I don't care if I never get back.
-Let me root, root, root for the home team,
-If they don't win, it's a shame.
-For it's one, two, three strikes, you're out,
-At the old ball game.")
+@comment = @activity.comments.create(body: "The cool vibe and delicious cocktails make Early Mercy ideal for catching up with a friend or a fun night out.")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "New Battletoads just released.", description: "Call: (416) 861-9521 to pre-order your copy.", end_time: DateTime.tomorrow, location_title: "Gamestop (EB Games)", location: "199 Bay St C-134, Toronto, ON M5L 1E7", picture_url: "https://upload.wikimedia.org/wikipedia/en/d/df/Battletoads_in_Battlemaniacs.png")
+@activity = Activity.create(title: "Rock & Blues Foundations - Intermediate Drop-In Guitar Class", description: "Students will practice playing rhythm and lead guitar together, as well as alternating between both roles.", end_time: DateTime.tomorrow, location_title: "Mint Music", location: "116 Bond St, Toronto, ON M5B 1X8, Toronto, ON", picture_url: "http://i63.tinypic.com/o5oxhs.jpg")
 @activity.owner = User.first
 @activity.save
 @acomment = @activity.comments.create(body: "Woah, I never thought this was going to be released!")
