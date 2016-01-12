@@ -35,7 +35,7 @@ Take me out with the crowd;")
 @comment.user = User.last
 @comment.save
 
-@activity = Activity.create(title: "Bitmaker Demo-day NOW!", description: "Lets go Team Gibson.", end_time: DateTime.now, location_title: "Bitmaker Labs" , location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
+@activity = Activity.create(title: "Meet Your Makers: Web & iOS Demo Night NOW", description: "Looking for web or iOS development talent? Here's your chance to find it.", end_time: DateTime.now, location_title: "Bitmaker Labs" , location: "220 King St W, Suite 200, Toronto, ON M5H 1K4", picture_url: "http://blog.bitmakerlabs.com/content/images/2015/09/blog-logo.png")
 @activity.owner = User.find(3)
 @activity.save
 @comment = @activity.comments.create(body: "These apps are amazing!")
