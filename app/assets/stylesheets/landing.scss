@@ -77,7 +77,7 @@
     $card-header-background: $card-background;
     $card-margin: 1em;
     $card-image-hover-opacity: 0.7;
-    $card-image-hover-color: #e04736;
+    $card-image-hover-color: #F8F2B4;
 
     @include flex-basis(15em);
     @include flex-grow(1);
@@ -89,6 +89,8 @@
     cursor: pointer;
     margin: 0 $card-margin $base-spacing $card-margin;
     position: relative;
+
+  .head-image
 
     .card-image {
       overflow: hidden;
@@ -141,14 +143,5 @@
         background-color: $card-background;
       }
     }
-  }
-}
-
-.team-member-attributes {
-  display: inline-block;
-
-  li {
-    list-style-type: none;
-    text-align: center;
   }
 }

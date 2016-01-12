@@ -16,3 +16,15 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+
+$(document).ready(function(){
+  $('.menuicon').click(function(){
+    $('.pop-out').toggleClass('show');
+  })
+  $('html').click(function(){
+    $('.pop-out').removeClass('show');
+  })
+  $('.pop-out, .menuicon').click(function(event){
+    event.stopPropagation();
+  })
+})
