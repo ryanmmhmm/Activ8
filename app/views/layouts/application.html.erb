@@ -26,7 +26,7 @@
       <ul>
         <% if current_user %>
           <li><%= link_to image_tag(current_user.picture_url, alt: 'View Profile'), user_path(current_user), class: 'nav-profile-picture' %></li>
-          <li><%= link_to 'Logout', :logout, method: :post %></li>
+          <li><%= link_to 'Logout', :logout, method: :get %></li>
           <li><%= link_to 'Create Activity', new_activity_url %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>
@@ -42,15 +42,14 @@
     <div class="pop-out">
       <ul>
         <% if current_user %>
-        <li><%= link_to image_tag(current_user.picture_url, alt: 'View Profile'), user_path(current_user), class: 'nav-profile-picture' %></li>
-          <li><%= link_to 'Logout', :logout, method: :post %></li>
+          <li class="profilepic-menu"><%= link_to image_tag(current_user.picture_url, alt: 'View Profile'), user_path(current_user), class: 'nav-profile-picture' %></li>
+          <li><%= link_to 'Logout', :logout, method: :get %></li>
           <li><%= link_to 'Create Activity', new_activity_url %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>
           <li><%= link_to 'Login', :login %></li>
         <% end %>
         <li><%= link_to 'Home', activities_url %></li>
-      </ul>
       </ul>
     </div>
 <!-- End Navbar -->
