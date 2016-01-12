@@ -15,16 +15,28 @@ p {
 }
 
 .pop-out{
-  height: 450px;
+  height: 100%;
   width:200px;
-  background-color: red;
+  background-color: white;
   position: fixed;
   top: 50px;
   left: -200px;
   transition: all .5s ease;
   opacity: 0;
   z-index: 1000;
+  list-style: none;
+
+  li {
+    margin: 10%;
+    // text-align: center;
+    font-size: 150%;
+    list-style: none;
+  }
 }
+
+.profilepic-menu {
+    width: 96%;
+  }
 
 .show {
   left: 0px;
