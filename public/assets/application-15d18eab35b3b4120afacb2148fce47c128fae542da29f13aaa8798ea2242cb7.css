@@ -1,0 +1,1093 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed|Open+Sans+Condensed:300,300italic,700);
+/* line 4, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* line 4, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+h1, h2, h3 {
+  color: white;
+}
+
+/* line 8, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+a {
+  text-decoration: none;
+  color: #e04736;
+}
+
+/* line 13, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+p {
+  color: white;
+}
+
+/* line 17, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.pop-out {
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  position: fixed;
+  top: 50px;
+  left: -200px;
+  transition: all .5s ease;
+  opacity: 0;
+  z-index: 1000;
+  list-style: none;
+}
+/* line 29, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.pop-out li {
+  margin: 10%;
+  font-size: 150%;
+  list-style: none;
+}
+/* line 37, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.pop-out .nav-profile-picture img {
+  width: 96%;
+}
+
+/* line 43, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.profilepic-menu {
+  width: 96%;
+}
+
+/* line 47, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.show {
+  left: 0px;
+  opacity: 1;
+}
+
+/* line 52, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+body {
+  font-family: 'helvetica', 'open-sans-light';
+  box-sizing: content-box;
+  background-image: url("background_world.png");
+  background-attachment: fixed;
+  background-repeat: none;
+  background-width: 100%;
+}
+@font-face {
+  /* line 52, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+  body {
+    font-family: "open-sans-light";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf.woff2") format("woff2"), url("/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf.woff") format("woff"), url("/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf.ttf") format("truetype"), url("/fonts/opensans_light_macroman/OpenSans-Light-webfond.ttf.svg#open-sans-light") format("svg");
+  }
+}
+/* line 63, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+input.btn {
+  -moz-box-shadow: inset 0px -3px 7px 0px #000000;
+  -webkit-box-shadow: inset 0px -3px 7px 0px #000000;
+  box-shadow: inset 0px -3px 7px 0px #000000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #37434a), color-stop(1, #000000));
+  background: -moz-linear-gradient(top, #37434a 5%, #000000 100%);
+  background: -webkit-linear-gradient(top, #37434a 5%, #000000 100%);
+  background: -o-linear-gradient(top, #37434a 5%, #000000 100%);
+  background: -ms-linear-gradient(top, #37434a 5%, #000000 100%);
+  background: linear-gradient(to bottom, #37434a 5%, #000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37434a', endColorstr='#000000',GradientType=0);
+  background-color: #37434a;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #e04736;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
+}
+
+/* line 89, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+input.btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #37434a));
+  background: -moz-linear-gradient(top, #000000 5%, #37434a 100%);
+  background: -webkit-linear-gradient(top, #000000 5%, #37434a 100%);
+  background: -o-linear-gradient(top, #000000 5%, #37434a 100%);
+  background: -ms-linear-gradient(top, #000000 5%, #37434a 100%);
+  background: linear-gradient(to bottom, #000000 5%, #37434a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#37434a',GradientType=0);
+  background-color: #000000;
+}
+
+/* line 99, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+input.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 104, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+#wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 109, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+ul {
+  padding-left: 0;
+}
+
+/* line 113, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.parent-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 84px;
+}
+/* line 20, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.parent-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 118, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.container {
+  float: left;
+  display: block;
+  margin-right: 3.7037%;
+  width: 100%;
+  width: 100%;
+}
+/* line 89, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.container:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 118, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+  .container {
+    float: left;
+    display: block;
+    margin-right: 7.69231%;
+    width: 100%;
+  }
+  /* line 89, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .container:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 118, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+  .container {
+    float: left;
+    display: block;
+    margin-right: 16.66667%;
+    width: 100%;
+  }
+  /* line 89, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .container:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 132, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-2 {
+  background-color: #e04736;
+  position: absolute;
+  height: 84px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 141, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-logo {
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  margin-left: 29% !important;
+}
+/* line 148, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-logo img {
+  width: 75px;
+}
+/* line 153, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-logo .activate-footer-logo {
+  position: absolute;
+  top: -50%;
+}
+
+/* line 159, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social {
+  margin: 0 0 10px 0;
+  margin-top: 23px;
+}
+/* line 163, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social ul {
+  vertical-align: text-top;
+}
+/* line 167, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social li {
+  display: inline;
+  margin: 0 15px 15px 15px;
+}
+/* line 172, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social img {
+  width: 36px;
+}
+/* line 176, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social .activate-logo-footer {
+  width: 10%;
+}
+/* line 180, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-social a {
+  text-decoration: none;
+}
+
+/* line 185, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-secondary-links {
+  overflow: none;
+}
+/* line 187, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-secondary-links ul {
+  background-color: black;
+  margin: 0;
+}
+/* line 191, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-secondary-links ul li {
+  display: inline;
+}
+/* line 195, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/main.scss */
+.footer-secondary-links ul a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 5, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #333;
+  border-bottom: 5px solid black;
+}
+/* line 12, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: auto;
+  float: right;
+}
+/* line 22, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav li {
+  list-style-type: none;
+  float: right;
+  z-index: 20;
+}
+/* line 27, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* line 36, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav #nav-logo {
+  position: relative;
+  float: left;
+}
+/* line 41, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav .nav-logo {
+  padding: 7px 8px;
+}
+/* line 45, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav .activatelogo {
+  height: 30px;
+  z-index: 20;
+}
+/* line 51, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav #hamburger-button img {
+  position: relative;
+  margin: 7px 15px;
+  height: 30px;
+  width: 30px;
+  float: left;
+  z-index: 10;
+}
+/* line 61, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav .nav-profile-picture {
+  padding: 6px 16px;
+}
+/* line 65, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav .nav-profile-picture img {
+  height: 30px;
+  width: 30px;
+  border-radius: 0.5rem;
+}
+/* line 73, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav a:hover:not(.active) {
+  background-color: #e04736;
+}
+/* line 77, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/navigation.scss */
+#nav .active {
+  background-color: #333;
+}
+
+/* line 4, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/system-notifications.scss */
+.alerts {
+  margin-top: 53px;
+  height: auto;
+}
+/* line 8, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/system-notifications.scss */
+.alerts p {
+  margin: 0;
+  padding: 0;
+}
+/* line 13, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/system-notifications.scss */
+.alerts #notice {
+  background-color: #e04736;
+  color: white;
+  text-align: center;
+}
+/* line 19, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/system-notifications.scss */
+.alerts #alert {
+  background-color: #e04736;
+  color: white;
+  text-align: center;
+}
+
+/* line 3, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.cards {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  float: left;
+  width: 25%;
+}
+
+/* line 12, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card {
+  -webkit-flex-basis: 15em;
+  -moz-flex-basis: 15em;
+  flex-basis: 15em;
+  -ms-flex-preferred-size: 15em;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid white;
+  box-shadow: 0 2px 4px #c52f1e;
+  cursor: pointer;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+}
+/* line 39, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card p {
+  color: black;
+}
+/* line 43, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+/* line 50, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-image {
+  overflow: hidden;
+  height: 150px;
+  max-height: 150px;
+  background-color: #F8F2B4;
+}
+/* line 56, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-image img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  height: 150px;
+  opacity: 1;
+}
+/* line 66, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  border-bottom: 1px solid white;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  line-height: 1.0em;
+  padding: 0.5em 0.75em;
+}
+/* line 75, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-header p {
+  margin: 0;
+}
+/* line 79, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-header p:first-child {
+  text-align: center;
+}
+/* line 84, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-copy {
+  font-size: 0.9em;
+  line-height: 1.0em;
+  padding: 0.75em 0.75em;
+  padding-bottom: 0;
+}
+/* line 90, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .card-copy p {
+  margin: 0.25rem 0;
+}
+/* line 96, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card:focus, .card:hover {
+  cursor: pointer;
+}
+/* line 100, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card:focus img, .card:hover img {
+  opacity: 0.7;
+}
+/* line 105, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card:active {
+  background-color: white;
+}
+/* line 108, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card:active .card-header {
+  background-color: white;
+}
+/* line 113, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity-card.scss */
+.card .add-comment {
+  padding-top: 0;
+  text-align: center;
+}
+
+/* line 9, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.title {
+  text-align: center;
+}
+
+/* line 13, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity {
+  display: inline-block;
+  border-top: 1px black solid;
+  box-sizing: content-box;
+  margin: 0.25rem 0;
+}
+/* line 19, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity * {
+  line-height: 1.5rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/* line 26, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-owner {
+  width: 5rem;
+  border: 0px black solid;
+  margin: auto 0;
+}
+/* line 31, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-owner a {
+  display: block;
+  margin: auto;
+}
+/* line 36, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-owner img {
+  margin: auto;
+}
+/* line 41, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-info {
+  width: 70%;
+  border: 0px black solid;
+}
+/* line 45, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-info p {
+  display: block;
+}
+/* line 49, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity .activity-info a {
+  color: cornflowerblue;
+}
+
+/* line 55, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options:hover {
+  background: #616f78;
+  background-image: -webkit-linear-gradient(top, #616f78, #242729);
+  background-image: -moz-linear-gradient(top, #616f78, #242729);
+  background-image: -ms-linear-gradient(top, #616f78, #242729);
+  background-image: -o-linear-gradient(top, #616f78, #242729);
+  background-image: linear-gradient(to bottom, #616f78, #242729);
+  text-decoration: none;
+}
+
+/* line 64, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options {
+  background: #4a555c;
+  background-image: -webkit-linear-gradient(top, #4a555c, #000000);
+  background-image: -moz-linear-gradient(top, #4a555c, #000000);
+  background-image: -ms-linear-gradient(top, #4a555c, #000000);
+  background-image: -o-linear-gradient(top, #4a555c, #000000);
+  background-image: linear-gradient(to bottom, #4a555c, #000000);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 3px 13px #666666;
+  -moz-box-shadow: 0px 3px 13px #666666;
+  box-shadow: 0px 3px 13px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 7px 20px 10px 20px;
+  text-decoration: none;
+}
+/* line 83, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options a {
+  font-size: 60%;
+}
+/* line 87, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options p {
+  width: 20%;
+  height: auto;
+  border: 0px black solid;
+}
+/* line 93, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options .actions {
+  width: auto;
+  height: auto;
+}
+/* line 98, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options form {
+  border: none;
+}
+/* line 102, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity-options form > input {
+  display: block;
+  border: none;
+  padding: 0 0.25rem;
+}
+
+/* line 110, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activityform {
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+/* line 111, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activityform .submit {
+  padding-top: 2%;
+}
+/* line 114, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activityform .field {
+  padding-bottom: 1%;
+}
+
+/* line 131, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+#activity_description {
+  height: 60px;
+  width: 65%;
+}
+
+/* line 136, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+#activity_location_title {
+  width: 65%;
+}
+
+/* line 140, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+#activity_location {
+  width: 65%;
+}
+
+/* line 144, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+#activity_title {
+  width: 65%;
+}
+
+/* line 148, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+.activity_form_title {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+/* line 154, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/activity.scss */
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 4, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.activity_comments_header {
+  color: #333;
+}
+
+/* line 7, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comments {
+  display: table;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 100%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+/* line 23, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comments h1 {
+  margin: 0 2.5%;
+}
+
+/* line 28, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment {
+  display: table-row;
+  padding-bottom: 15px;
+}
+/* line 32, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment p {
+  color: black;
+  margin: 0;
+  line-height: 1.25em;
+  padding-left: 15px;
+}
+/* line 39, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment .comment-user {
+  display: table-cell;
+  width: 20%;
+  padding-left: 15px;
+}
+/* line 44, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment .comment-user img {
+  height: 50px;
+  width: 50px;
+  border-radius: 0.25rem;
+}
+/* line 51, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment .comment-content {
+  display: table-cell;
+  width: 75%;
+  margin: 0;
+  padding: 0 15px;
+}
+/* line 57, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/comments.scss */
+.comment .comment-content p {
+  word-wrap: break-word;
+}
+
+/* line 7, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.signup_page {
+  text-align: center;
+  color: white;
+  padding-top: 3.5%;
+  margin-top: 0;
+}
+
+/* line 14, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.signup-form {
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+/* line 15, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.signup-form h2 {
+  color: black;
+}
+/* line 18, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.signup-form .field {
+  padding-bottom: 15px;
+}
+
+/* line 35, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.actions > .btn {
+  margin-bottom: 15px;
+}
+
+/* line 40, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.edit_user_title {
+  text-align: center;
+  color: white;
+}
+
+/* line 45, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.loginform {
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+/* line 46, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.loginform .field {
+  padding-bottom: 15px;
+}
+
+/* line 63, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.logintitle {
+  text-align: center;
+  color: white;
+  padding-top: 3.5%;
+}
+
+/* line 69, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.commentheader {
+  color: black;
+}
+
+/* line 73, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.commentform {
+  margin-top: 50px;
+  text-align: center;
+  color: #333;
+  display: block;
+  margin: 50px;
+  opacity: 0.9;
+  background: white;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  width: 40%;
+  margin: auto;
+  border: 5px solid;
+  border-radius: 10px;
+}
+/* line 75, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.commentform .field {
+  padding-bottom: 15px;
+}
+
+/* line 92, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+#comment_body {
+  height: 60px;
+  width: 65%;
+}
+
+/* line 99, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.user h1 {
+  margin: 0 2.5%;
+}
+/* line 103, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.user .user-attributes {
+  margin: 0 2.5%;
+}
+/* line 107, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.user .user-attributes img {
+  height: 100px;
+  width: 100px;
+  border-radius: 0.5rem;
+}
+
+/* line 116, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/users.scss */
+.comments h1 {
+  color: black;
+}
+
+/* line 4, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-container {
+  background-color: #e04736;
+}
+
+/* line 8, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map {
+  width: 90%;
+  min-height: 350px;
+  margin: 15px auto;
+  border: 0.15rem black solid;
+  border-radius: 0.25em;
+  clear: both;
+}
+
+/* line 17, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-menu {
+  background-color: #333;
+  color: white;
+  border-top: 0.25rem black solid;
+  min-height: 45px;
+}
+/* line 23, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-menu button {
+  float: left;
+  margin: 0.5rem;
+  background-color: #111;
+  border: none;
+  border-radius: 0.1rem;
+  height: 1.25rem;
+  color: white;
+}
+/* line 34, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-top: 0.75rem;
+}
+/* line 42, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-menu form {
+  float: left;
+  margin: 0.5rem;
+}
+/* line 46, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/maps.scss */
+#map-menu form input {
+  background-color: #111;
+  color: white;
+  border: none;
+  height: auto;
+  font: helvetica;
+  height: 1.25rem;
+  border-radius: 0.1rem;
+}
+
+/* line 1, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.hero {
+  margin-bottom: 2%;
+  background: url("http://champion-news.com/wp-content/uploads/2015/12/Woman-Playing-Tennis.jpg"), -webkit-linear-gradient(-280deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background: url("http://champion-news.com/wp-content/uploads/2015/12/Woman-Playing-Tennis.jpg"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 18, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.hero .hero-inner {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 20, /Users/walsh_amy/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 22, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.hero .hero-inner .hero-copy {
+  position: relative;
+  text-align: center;
+  margin: 175px auto;
+  width: 60%;
+}
+/* line 28, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.hero .hero-inner .hero-copy h1 {
+  color: white;
+  font-size: 1.6em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.1em;
+  padding: 0.5em 0.5em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 28, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+  .hero .hero-inner .hero-copy h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* line 59, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  float: left;
+  width: 33.3%;
+}
+/* line 66, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card {
+  -webkit-flex-basis: 15em;
+  -moz-flex-basis: 15em;
+  flex-basis: 15em;
+  -ms-flex-preferred-size: 15em;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid gainsboro;
+  box-shadow: 0 2px 4px #e6e6e6;
+  cursor: pointer;
+  margin: 0 1em 1.5em 1em;
+  position: relative;
+}
+/* line 93, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card .head-image
+.card-image {
+  overflow: hidden;
+  height: 150px;
+  max-height: 150px;
+  background-color: #F8F2B4;
+}
+/* line 101, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card .head-image
+.card-image img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  opacity: 1;
+}
+/* line 110, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card .card-header {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid gainsboro;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em 0.75em;
+}
+/* line 120, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card .card-copy {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 0.75em 0.75em;
+}
+/* line 125, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card .card-copy p {
+  margin: 0 0 0.75em;
+}
+/* line 130, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card:focus, .cards-home .card:hover {
+  cursor: pointer;
+}
+/* line 134, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card:focus img, .cards-home .card:hover img {
+  opacity: 0.7;
+}
+/* line 139, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card:active {
+  background-color: #f6f6f6;
+}
+/* line 142, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.cards-home .card:active .card-header {
+  background-color: #f6f6f6;
+}
+
+/* line 150, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.team h1 {
+  margin-left: 15px;
+}
+/* line 154, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.team .team-members {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 158, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.team .team-members .team-member-attributes {
+  display: inline-block;
+  text-align: center;
+}
+/* line 163, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/landing.scss */
+.team .team-members .team-member-attributes li {
+  list-style-type: none;
+}
+
+/* line 14, /Users/walsh_amy/Bitmaker/Activ8/app/assets/stylesheets/application.scss */
+html, body {
+  margin: 0 auto;
+  height: 100%;
+  font-family: 'open sans condensed';
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
